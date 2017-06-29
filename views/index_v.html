@@ -1,0 +1,96 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+
+<!--<head>-->
+    <!--<%  include ../public/app/partials/header.ejs %>-->
+        <!--<title>Polaris Benefit Search</title>-->
+<!--</head>-->
+
+<!--<body ng-app="masterApp" style="background-color:#FFFFFF">-->
+    <!--<div class="container-fluid" ng-controller="masterCtrl">-->
+        <!--<div class="panel panel-default row navbar-fixed-top padding-left-15 padding-right-15" style="background-color: #003DA1;">-->
+            <!--<div class="col-lg-5 col-md-5 col-sm-5" ng-hide="isAdminPage">-->
+                <!--<span class="headerTitle">-->
+              <!--Benefit Search-->
+            <!--</span>-->
+                <!--<span class="headerInfo">-->
+              <!--<%=firstName%> <%=lastName%> : logged at : {{currentLogin}}-->
+            <!--</span>-->
+            <!--</div>-->
+            <!--<div class=" col-lg-8 col-md-8 col-sm-8" ng-show="isAdminPage">-->
+                <!--<span class="headerTitle">-->
+              <!--Benefit Search - ADMIN-->
+            <!--</span>-->
+                <!--<span class="headerInfo">-->
+              <!--<%=firstName%> <%=lastName%> : logged at : {{currentLogin}}-->
+            <!--</span>-->
+            <!--</div>-->
+            <!--<div class=" col-lg-4 col-md-4 col-sm-4" ng-show="isAdminPage">-->
+                <!--<button style="margin-bottom: 10px; margin-top: 10px; font-size: 15px; font-weight: bold; background-color: white; border: thin solid #2D2D39; color: #2D2D39; height:40px; width: 45%;" type="submit" value="SEARCH" ng-click="closeAdminPage();" name="SEARCHBTN_FT">Close Admin-->
+                <!--</button>-->
+            <!--</div>-->
+            <!--<div class=" col-lg-5 col-md-5 col-sm-5" ng-hide="isAdminPage">-->
+                <!--<div class="search-form-user" ng-if="showUserName">-->
+                    <!--<i class="fa fa-user fa-2x padding-right-5" aria-hidden="true" style="color:#fff"></i> <span class="user-details padding-left-5">{{indvDetails.firstName}}  {{indvDetails.lastName}}</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class=" col-lg-1 col-md-1 col-sm-1" ng-if="isAdminRole('<%=userRole%>')" ng-hide="isAdminPage">-->
+                <!--<div class="search-form-icon">-->
+                    <!--<a href="#" ng-click="openAdmin()"><i class="fa fa-cog fa-2x" aria-hidden="true" name="GEAR_FT"></i></a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class=" col-lg-1 col-md-1 col-sm-1" ng-hide="isAdminPage">-->
+                <!--<div class="search-form-icon">-->
+                    <!--<a href="#" ng-click="open()"><i class="fa fa-search fa-2x" aria-hidden="true"></i></a>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div ng-hide="isAdminPage">-->
+            <!--<div style="padding-top:50px">-->
+                <!--<div class="row ">-->
+                    <!--<div class="col-sm-12 col-md-12 col-lg-12" style="background-color:#EEEFF0" ng-show="showMemberGrid">-->
+                        <!--<%  include ../public/app/partials/userSummaryGrid.ejs %>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div ng-controller="memberResultCtrl">-->
+            <!--<div ng-if="isMemberSearch"> &lt;!&ndash; Begin Member Search &ndash;&gt;-->
+              <!--<div class="row ">-->
+                <!--<div class="col-sm-12 col-md-12 col-lg-12" ng-show="showCoverageType">-->
+                  <!--<%  include ../public/app/partials/coverageType.ejs %>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="row ">-->
+                <!--<div class="col-sm-12 col-md-12 col-lg-12" ng-show="showCoverageOverview">-->
+                  <!--<%  include ../public/app/partials/coverageOverview.ejs %>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div> &lt;!&ndash; end Member Search &ndash;&gt;-->
+            <!--<div ng-if="isGroupSearch"> &lt;!&ndash; Begin group search&ndash;&gt;-->
+              <!--<div class="row ">-->
+                <!--<div class="col-sm-12 col-md-12 col-lg-12" ng-show="showCoverageType">-->
+                  <!--<%  include ../public/app/partials/groupCoverageType.ejs %>-->
+                <!--</div>-->
+              <!--</div>-->
+              <!--<div class="row ">-->
+                <!--<div class="col-sm-12 col-md-12 col-lg-12" ng-show="showCoverageOverview">-->
+                  <!--<%  include ../public/app/partials/groupCoverageOverview.ejs %>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div> &lt;!&ndash; End group Search &ndash;&gt;-->
+            <!--<div class="row ">-->
+              <!--<div class="col-sm-12 col-md-12 col-lg-12" ng-show="showBenifitInfo">-->
+                <!--<%  include ../public/app/partials/benifitInformation.ejs %>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div ng-show="isAdminPage">-->
+            <!--<div ng-controller="quickLinksCtrl" style=" padding-top:50px" name="ADMINPAGE_FT">-->
+                <!--<%  include ../public/app/partials/quickLinks.ejs %>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</body>-->
+
+<!--</html>-->

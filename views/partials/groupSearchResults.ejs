@@ -1,0 +1,32 @@
+ <div class=" panel panel-primary results-border">
+  <div class="search-results-head">
+  <div class="panel-heading">
+    <hr>
+    <h3 class="panel-title heading">RESULTS</h3>
+  </div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-hover searchTable">
+        <thead class="searchTableHeader subTitle" >
+        <tr>
+          <th>#</th>
+          <th>Group Name</th>
+          <th>Group #</th>
+          <th>Address</th>
+          <th>Telephone</th>
+          <th>Start Date</th>
+        </tr>
+        </thead>
+          <tbody class="subTitle-data">
+          <tr ng-repeat="groupData in groupSearch" ng-click="groupSubmit(groupData); closeModal();" name="GROUPRESULT_FT">
+            <td>{{ $index +1 }}.</td>
+            <td>{{ groupData.groupName }}</td>
+            <td>{{ groupData.groupNo }}</td>
+            <td>{{ groupData.address }}</td>
+            <td>{{ groupData.tel }}</td>
+            <td>{{ groupData.effectiveStartDate }}</td>
+          </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

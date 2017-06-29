@@ -1,0 +1,77 @@
+<!-- <div style="padding-bottom:10px;"></div>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-6">
+        <div class="panel panel-info">
+          <div class="panel-heading panel-blue" ng-click="showOOPInfo()">
+              <h3 class="panel-title entire-panel-heading">Annual Deductible <i ng-if="!isOOPInfo" class="fa fa-minus float-right"></i><i ng-if="isOOPInfo" class="fa fa-plus float-right"></i></h3>
+          </div>
+            <div class="panel-body"  slide-toggle="isOOPInfo" style="overflow-x:auto;">
+              <div ng-if="grpRiderLoading" class="loading-label">
+             <span><i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>Loading...</span>
+         </div>
+         <div class="errorMessage" ng-if="showGroupRiderError">
+                    <div class="col-lg-12 col-md-12 col-sm-12 panel-body errorMessage">
+                        <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{groupInfoErr}}</div>
+                    </div>
+                </div>
+                <table class="annual-deductable-table" ng-if="!grpRiderLoading && !showGroupRiderError">
+                    <thead class="border-bottom">
+                        <tr>
+                            <td class="text-align-center padding-left-2em"><b>In Network Max</b></td>
+                            <td></td>
+                            <td class="text-align-center padding-left-2em"><b>Out Network Max</b> </td>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td class="padding-left-2em">Family</td>
+                        <td>Individual</td>
+                        <td class="padding-left-4em">Family</td>
+                        <td>Individual</td>
+                    </tr>
+                    <tr class="color-green">
+                        <td class="padding-left-1-5em"><b> ${{groupCoverageOverviewRes.basePlan[0].INNPrimaryFamilyDeductibleMaximum}} </b></td>
+                        <td class="border-right-0-1em"><b> ${{groupCoverageOverviewRes.basePlan[0].INNPrimaryIndividualDeductibleMaximum}} </b></td>
+                        <td class="padding-left-3em"><b> ${{groupCoverageOverviewRes.basePlan[0].OONPrimaryFamilyDeductibleMaximum}} </b></td>
+                        <td><b> ${{groupCoverageOverviewRes.basePlan[0].OONPrimaryIndividualDeductibleMaximum}} </b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-lg-6">
+        <div class="panel panel-info">
+          <div class="panel-heading panel-blue" ng-click="showOOPInfo()">
+              <h3 class="panel-title entire-panel-heading">Out of Pocket <i ng-if="!isOOPInfo" class="fa fa-minus float-right"></i><i ng-if="isOOPInfo" class="fa fa-plus float-right"></i></h3>
+          </div>
+            <div class="panel-body" slide-toggle="isOOPInfo" style="overflow-x:auto;">
+              <div ng-if="grpRiderLoading" class="loading-label">
+              <span><i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>Loading...</span>
+         </div>
+                <div class="errorMessage" ng-if="showGroupRiderError">
+                           <div class="col-lg-12 col-md-12 col-sm-12 panel-body errorMessage">
+                               <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{groupInfoErr}}</div>
+                           </div>
+                       </div>
+                <table class="annual-deductable-table"  ng-if="!grpRiderLoading && !showGroupRiderError">
+                    <thead class="border-bottom">
+                        <td class="text-align-center padding-left-2em"><b>In Network Max</b></td>
+                        <td></td>
+                        <td class="text-align-center padding-left-2em" ><b>Out Network Max</b></td>
+                    </thead>
+                    <tr>
+                        <td class="padding-left-2em">Family</td>
+                        <td>Individual</td>
+                        <td class="padding-left-4em">Family</td>
+                        <td>Individual</td>
+                    </tr>
+                    <tr class="color-green">
+                        <td class="padding-left-1-5em"><b> ${{groupCoverageOverviewRes.basePlan[0].INNPrimaryFamilyDeductibleMaximum}} </b></td>
+                        <td class="border-right-0-1em"><b> ${{groupCoverageOverviewRes.basePlan[0].INNPrimaryIndividualDeductibleMaximum}} </b></td>
+                        <td class="padding-left-3em"><b> ${{groupCoverageOverviewRes.basePlan[0].OONPrimaryFamilyDeductibleMaximum}} </b></td>
+                        <td><b> ${{groupCoverageOverviewRes.basePlan[0].OONPrimaryIndividualDeductibleMaximum}} </b></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->

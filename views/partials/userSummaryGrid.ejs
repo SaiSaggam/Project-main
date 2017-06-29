@@ -1,0 +1,27 @@
+<div class="panel panel-info">
+    <div class="panel-heading panel-orange" ng-click="toggleOpen()" name="MEMBERSUMMARY_FT">
+        <h3 class="panel-title entire-panel-heading ">Member Information <i ng-if="!isOpenPanel" class="fa fa-plus float-right"></i><i ng-if="isOpenPanel" class="fa fa-minus float-right"></i>
+        </h3>
+    </div>
+    <div class="panel-body" slide-toggle="isOpenPanel" style="overflow-x:auto;">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Member ID</th>
+                <th>DOB</th>
+                <th>Gender</th>
+                <th>Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{indvDetails.memberId.id}}</td>
+                <td>{{indvDetails.dob | date: "MM-dd-yyyy"}} ({{indvDetails.birthday}})</td>
+                <td>{{indvDetails.gender}}</td>
+                <td>{{indvDetails.address}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="padding-top-10"></div>

@@ -1,0 +1,1565 @@
+@font-face {
+    font-family: UHG;
+    src: url("../fonts/UHCSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: UHG-Bold;
+    src: url("../fonts/UHCSans-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: UHG-SemiBold;
+    src: url("../fonts/UHCSans-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: UHG-Light;
+    src: url("../fonts/UHCSans-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: UHG-Medium;
+    src: url("../fonts/UHCSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: UHG-Heavy;
+    src: url("../fonts/UHCSans-Heavy.otf") format("opentype");
+}
+
+html,
+body,
+div,
+span,
+a,
+li,
+td,
+th {
+    font-family: 'UHG', ;
+}
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    margin: 0px 0 0 !important;
+}
+
+input[type='radio']:after {
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    border-color: #196ECF;
+    top: 3px;
+    position: relative;
+    background-color: white;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #196ECF;
+}
+
+input[type='radio']:checked:after {
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    top: 3px;
+    position: relative;
+    background-color: #196ECF;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid #196ECF;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+/*Bootstrap overrides:*/
+
+.well {
+    background-color: white !important;
+    border: 1px solid #ddd !important;
+}
+
+
+/*.zipCode {
+  border: none !important;
+  width: 7.4ch !important;
+  background:
+    repeating-linear-gradient(90deg,
+        dimgrey 0,
+        dimgrey 1ch,
+        transparent 0,
+        transparent 1.5ch)
+      0 100%/100% 2px no-repeat !important;
+  font-size: 4ch !important;
+  letter-spacing: .5ch !important;
+}
+.zipCode:focus {
+  outline: none !important;
+}*/
+
+
+/*.panel-primary {*/
+
+
+/*border-color: #003DA1 !important;*/
+
+
+/*}*/
+
+.fa-spin {
+    -webkit-filter: blur(0);
+    -moz-webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+
+/*color changes*/
+
+.panel-primary {
+    background-color: #fff !important;
+    border-color: #f5f5f5 !important;
+}
+
+.panel {
+    border-radius: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.panel-info {
+    border-color: rgb(221, 221, 221) !important;
+    background-color: #f5f5f5 !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.navbar-collapse {
+    background-color: rgba(165, 235, 239, 1)!important;
+}
+
+.dropdown-toggle {
+    background-color: rgba(165, 235, 239, 1)!important;
+    color: black !important;
+}
+
+.panel-info>.panel-blue {
+    background-color: rgba(165, 235, 239, 1)!important;
+    border-color: rgba(165, 235, 239, 1) !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.panel-info>.panel-orange {
+    background-color: #ffaa25 !important;
+    border-color: #ffaa25 !important;
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+}
+
+.active a {
+    background-color: #ffffff !important;
+}
+
+.nav-tabs {
+    border-bottom: 1px solid black !important;
+}
+
+.nav-tabs > li {
+    margin-left: 2px !important;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.nav-tabs > li > a {
+    margin-right: 0px;
+    border: 0px !important;
+    font-weight: bold;
+}
+
+.nav-tabs.nav-justified > li a:hover {
+    background-color: white!important;
+}
+
+.nav-tabs.nav-justified > li a:hover {
+    color: #196ECF !important;
+}
+
+.nav-tabs.bordered > li a:hover {
+    background-color: white!important;
+}
+
+.nav-tabs.bordered > li a:hover {
+    color: #196ECF !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a {
+    color: #000000 !important;
+}
+
+.nav-tabs.nav-justified > li {
+    background-color: #196ECF;
+}
+
+.nav-tabs.nav-justified > li a {
+    color: #FFFFFF;
+}
+
+.nav-tabs.nav-justified > li a {
+    color: #FFFFFF;
+}
+
+.nav-tabs.bordered > li {
+    background-color: #196ECF;
+}
+
+.nav-tabs.bordered > li a {
+    color: #FFFFFF;
+}
+
+.nav-tabs.bordered > li a {
+    color: #FFFFFF;
+}
+
+
+/*mobile view nav tag*/
+
+
+/*.navbar-collapse {*/
+
+
+/*background-color: white !important;*/
+
+
+/*}*/
+
+.navbar-collapse.in {
+    overflow-y: none !important;
+}
+
+.alphabet {
+    text-decoration: none;
+    border: none;
+    padding: 0px 10px 0px 10px;
+    margin: 0px 10px 0px 10px;
+    outline: none;
+    background-color: #f5f5f5;
+    font-weight: bold;
+}
+
+/*.benefitLetters */
+.benefitLetters i{
+  display: block;
+}
+
+.border-active{
+  border: 1px solid black;
+  border-radius: 10%;
+}
+.panel-heading {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    /*border-color: #003DA1 !important;*/
+    /*background-color: #003DA1 !important;*/
+    /*color: #FFFFFF;*/
+}
+
+.glyphicon {
+    top: 0 !important;
+}
+
+
+.panel-body {
+
+padding: 5px 8px 5px 8px !important;
+font-size: 12px !important;
+}
+
+.form-group {
+    margin-bottom: 0px !important;
+}
+
+
+/*.table > thead > tr > th {*/
+
+
+/*background-color: #E2EDF7;*/
+
+
+/*color: #757588;*/
+
+
+/*}*/
+
+
+/*.table > thead > tr > th a {*/
+
+
+/*color: rgb(102, 105, 105);*/
+
+
+/*}*/
+
+.progress-bar {
+    background-color: #21B01E !important;
+}
+
+/* Latest CSS styling for entire app font size (Start)*/
+.font-size-16 {
+  font-size: 16px;
+}
+.heading {
+  font-size: 16px !important;
+}
+.subHeading{
+  font-size: 14px !important;
+}
+.subTitle {
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+.subTitle-data {
+  font-size: 12px !important;
+  }
+
+  /* Latest CSS styling for entire app font size (End)*/
+
+.searchFormLabels {
+    font-weight: bold !important;
+    font-size: 12px !important;
+    color: #666 !important;
+}
+
+.myblue {
+    background: blue;
+}
+
+.mygreen {
+    background: blue;
+}
+
+.searchFormErrorMsgBox {
+    border: thin solid #F04C57;
+    color: #F04C57;
+    padding: 10px 5px 10px 5px;
+    font-size: 13px;
+}
+
+.progress {
+    height: 10px !important;
+    margin-bottom: 5px !important;
+    border-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    background-color: rgba(0, 0, 0, 0.74) !important;
+}
+
+
+/*Login Page Styling */
+
+#login-heading1 {
+    padding-top: 115px;
+    text-align: center;
+    margin: 0px;
+}
+
+#login-heading2 {
+    padding: 0px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* End Login Page Styling */
+
+
+/* Index/Main Page Styling   (fix ordering later)*/
+.userName {
+  font-size: 18px !important;
+}
+.header-title {
+    font-size: 18px;
+    color: black;
+    display: block;
+    padding: 10px 0 0 5px;
+}
+
+.header-info {
+    font-size: 12px;
+    font-weight: 600;
+    color: black;
+    padding: 0 0 10px 5px;
+}
+
+.searchBtnGroup {
+    width: 180px;
+    border-top: 0 !important;
+    border-radius: 0px !important;
+}
+
+.buttomSearchButton {
+    border-style: solid;
+    border-color: #196ECF;
+    background-color: #196ECF;
+    font-size: 14pt;
+    font-weight: bold;
+    color: white;
+    border-radius: 0 !important;
+    width: 140px;
+    height: 42px;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    margin-left: 10px;
+}
+
+.padding {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.inputBoxes.redBox.ng-empty,
+.inputBoxes.ng-invalid.ng-empty.ng-touched,
+.inputBoxes.ng-invalid.ng-not-empty,
+.input-group input.ng-invalid {
+    border: solid 1px red !important;
+}
+
+.inputBoxes {
+    border-style: solid;
+    border-color: black;
+    border-radius: 0 !important;
+    width: 200px;
+}
+
+.searchForm {
+    background-color: white;
+    /*border: thin solid #CFD6DA;*/
+}
+.form-control {
+  font-size: 12px !important;
+}
+
+.form-group {
+    margin-bottom: 0px !important;
+}
+
+.formInputs {
+    margin: auto;
+}
+
+.searchTable {
+    width: 100%;
+    height: 70px;
+}
+
+.searchTableCaption {
+    background-color: #196ECF;
+    font-size: 14px;
+    color: white;
+    padding-left: 10px;
+}
+
+
+
+/* End Index/Main Page Styling */
+
+
+/* SearchForm Page Styling   (fix ordering later)*/
+
+.requiredStar {
+    color: red;
+}
+
+.caretColor {
+    color: black !important;
+}
+
+.caretColor:hover {
+    color: black !important;
+}
+
+
+/* End SearchForm Page Styling */
+
+
+/* CoverageType Page Styling */
+
+.coverage-type-right-margin {
+    margin-right: 2px solid #333 !important;
+}
+
+
+/* End CoverageType Page Styling */
+
+
+/* CoverageOverview Page Styling */
+
+.progressBarPadding {
+    padding-top: 5px;
+}
+
+.cvrOverviewNetworkLabels {
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: thin solid #000;
+    color: black;
+    font-size: 14px;
+}
+
+.cvrOverviewNetworkFamilyLabels {
+    padding-top: 10px;
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.cvrOverviewNetworkCashLabels {
+    display: inline-block;
+    font-size: 12px;
+    color: #000000;
+}
+
+.cvrOverviewNetworkCashLabelsRight {
+    display: inline-block;
+    font-size: 12px;
+    color: #000000;
+    float: right;
+}
+
+
+/* End CoverageOverview Page Styling */
+
+
+/* Resuable Styles*/
+
+.padding-top-3 {
+    padding-top: 3px;
+}
+
+
+/*added 12/14 fix after remod*/
+
+.searchform-layout {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-style: none !important;
+}
+
+/* Recent Search CSS Style for Alignment and Responsive (Start)*/
+ .recentSearchTable {
+overflow-x:auto;
+padding-top: 10px;
+}
+/* Recent Search CSS Style for Alignment and Responsive (End)*/
+
+/*.search-form-icon {
+    padding: 13px !important;
+    color: black !important;
+    font-size: 20px;
+}*/
+
+.search-form-user {
+    padding: 10px;
+}
+
+
+/*.search-form-icon:hover {
+    background-color: white !important;
+    color: #196ECF !important;
+    font: bold;
+}*/
+
+.padding-left-15 {
+    padding-left: 15px;
+}
+
+.padding-right-15 {
+    padding-right: 15px;
+}
+
+.padding-right-3 {
+    padding-right: 3em;
+}
+.padding-top-5 {
+  padding-top:5px !important;
+}
+.padding-top-50 {
+    padding-top: 50px;
+}
+
+.padding-top-10 {
+    padding-top: 10px !important;
+}
+
+.user-details {
+    color: black;
+    font-size: 22px;
+}
+
+.group-details {
+    color: black;
+    font-size: 22px;
+}
+
+.padding-right-5 {
+    padding-right: 5px;
+}
+
+.search-modal .modal-lg {
+    width: 75% !important;
+}
+
+
+/*all tables in UI css*/
+
+.table {
+    margin-bottom:0px !important;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    border-bottom-style: none;
+}
+
+.table>tbody>tr>td {
+    border-width: 0 !important;
+}
+
+.table > thead > tr > th {
+    font-weight: bold !important;
+}
+
+.table>tbody>tr>td {
+    border-top: none !important;
+}
+
+
+/* End of all tables in UI css*/
+
+
+/*coverage type scrollable table*/
+
+.Covtable-color.table-hover tbody tr:hover td,
+.Covtable-color.table-hover tbody tr:hover th {
+    background-color: white!important;
+}
+
+.hidden-table:hover {
+    background-color: #f5f5f5 !important;
+}
+
+.table-fixed tbody {
+    word-wrap: break-word;
+    display: block;
+    height: 75px;
+    min-width: 1000px;
+    overflow-y: auto;
+}
+
+.table-fixed thead,
+.table-fixed tbody > tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-fixed thead {
+    width: calc( 100% - 1em);
+}
+
+.scroll-hr {
+    overflow-x: auto;
+}
+
+.disclaimer-font {
+    font-weight: bold !important;
+    font-style: italic !important;
+    font-size: 12px !important;
+}
+
+
+/* End coverage type scrollable table*/
+
+
+/* start of specific rider style guide*/
+
+.rider-left-border {
+    border-left: 1px solid #ddd;
+}
+.rider-left-border> tbody {
+  height:auto !important;
+}
+
+/* End of specific rider style guide*/
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+
+.margin-top-25 {
+    margin-top: 25px;
+}
+
+.Fber-info {
+    background-color: rgb(242, 242, 242);
+}
+
+.member-info-table .table > thead > tr > th {
+    background-color: rgb(242, 242, 242)!important;
+    color: black !important;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    border-top: 1px solid black !important;
+    border-left: 1px solid black !important;
+    border-right: 1px solid black !important;
+}
+
+.nav-tabs>li {
+    background-color: #196ECF !important;
+}
+
+.nav-tabs>li>a {
+    color: #fff;
+    margin-right: 0px !important;
+}
+
+.disabledTab > a {
+    pointer-events: none;
+    background-color: grey !important;
+}
+
+.disabledTab {
+    cursor: not-allowed;
+}
+
+.seperator-label {
+    float: right;
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+.padding-top-2 {
+    padding-top: 2px;
+}
+
+.benifits-accordian .panel-group {
+    margin-bottom: 0px !important;
+}
+
+
+/* property for quickLink tab but it will change the appearance*/
+
+.dropdown-toggle {
+    background-color: white;
+    color: black !important;
+}
+
+.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu>li>a:hover {
+    background-color: #EEEFF0 !important;
+}
+
+.dropdown-menu>li>a {
+    height: 30px !important;
+    color: #2D2D39 !important;
+    font-size: 12px !important;
+}
+
+.dropdown-header {
+    font: Bold !important;
+    font-size: 14px !important;
+    color: white !important;
+    background-color: #8C9599 !important;
+    height: 30px !important;
+}
+
+.benifits-accordian .panel-heading {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-color: #C0E9FF !important;
+    background-color: #C0E9FF !important;
+    color: #FFFFFF;
+}
+
+.benifits-accordian .accordion-toggle {
+    /*background-color: #196ECF !important;*/
+    color: #333 !important;
+    font-size: 14px;
+    text-decoration: none !important;
+}
+
+.enable {
+    color: #D7D7D7;
+    cursor: not-allowed !important;
+}
+
+.disable {
+    color: #2D2D39;
+}
+
+
+/*
+
+    .dropdown-menu>li>a {
+        height: 30px !important;
+        color: #2D2D39 !important;
+        font-size: 14pt !important;
+    }
+
+    .dropdown-header {
+        font: Bold !important;
+        font-size: 14pt !important;
+        color: white !important;
+        background-color: #8C9599 !important;
+        height: 30px !important;
+    }
+
+    .benifits-accordian .panel-heading {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        border-color: #196ECF !important;
+        background-color: #196ECF !important;
+        color: #FFFFFF;
+    }
+
+    .benifits-accordian .accordion-toggle {
+        background-color: #196ECF !important;
+        color: #FFFFFF !important;
+        font-size: 14px;
+        text-decoration: none !important;
+    }
+    /*
+
+.dropdrop-toggle {
+
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+*/
+
+
+/*
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    background-color: white;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: white
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown-toggle {
+    background-color: white;
+}
+.dropdown-header {
+
+    background-color: grey;
+}
+*/
+
+
+/*
+.dropdown-menu a:hover {
+    color:white;
+    background-color: blue;
+
+}
+*/
+
+
+/*Entire UI css*/
+
+.entire-panel-heading {
+    font-size: 14px !important;
+    font-weight: bold;
+    font-color: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333 !important;
+    height: 12px !important;
+}
+
+
+/*End of entire UI css*/
+
+
+/*ridersInformation css*/
+
+div.vertical-line {
+    float: left;
+    height: 100px;
+    border-right: 0.1em solid silver;
+}
+
+.word-wrap {
+    word-wrap: break-word;
+}
+
+/*.rider-font-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}*/
+
+
+/*End of ridersInformation css*/
+
+.modal {
+    text-align: center;
+    padding: 0!important;
+}
+
+.modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.quicklinks-data-modal .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.search-modal .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    border-radius: 0px;
+    vertical-align: top;
+}
+
+.quicklinks-data-modal .modal-content {
+    border-radius: 0px;
+}
+
+.table-PopUp >tbody > tr:hover {
+    background-color: #F5F5F5;
+}
+
+
+/* STYLE FOR POP UP WINDOW  */
+
+.coc-footer {
+    background-color: #EEEFF0;
+    height: 80px;
+    width: 100%;
+}
+
+.coc-footer1 {
+    margin-left: 2em;
+    float: left;
+    margin-top: 2em;
+}
+
+.coc-popup {
+    width: 100%;
+}
+
+.coc-button {
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    background-color: white;
+}
+
+.coc-table-head {
+    border-bottom: 1px solid #EEEFF0;
+    border-top: 1px solid #EEEFF0;
+}
+
+.coc-table-head >tr .coc-table-head >tr >th .coc-body-hover >tr .coc-body >tr >td {
+    padding: 10px !important;
+}
+
+.coc-body-hover > tr:hover {
+    background-color: #EEEFF0;
+}
+
+
+/* END OF POP UP WINDOW  */
+
+.footer1 {
+    background-color: silver;
+    height: 80px;
+    width: 100%;
+}
+
+.text-footer1 {
+    margin-left: 2em;
+}
+
+
+/* Styles for member search benifit display coverage info section   */
+
+
+/* Trying to apply @media logic for making 2 table responsive.*/
+
+
+/*
+@media(max-width: 650px)
+{
+    .mem-annual{
+     width: 100%;
+        margin-bottom: 5%;
+
+
+    }
+    .mem-out{
+        width: 100%;
+
+}
+
+    }
+*/
+
+
+/* code for the annual-deductable-table and out-of-pocket. */
+
+.mem-annual {
+    width: 49%;
+    background-color: #EEEFF0;
+    float: left;
+    height: 200px;
+}
+
+.mem-title {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.annual-deductable-table {
+    height: 70%;
+    width: 100%;
+    padding: 5px 8px 5px 8px !important;
+}
+.annual-deductable-table tbody {
+    word-wrap: break-word;
+    display: block;
+    height: 70px;
+    overflow-y: auto;
+}
+
+.annual-deductable-table thead,
+.annual-deductable-table tbody > tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+.border-bottom {
+    border-bottom: 0.1em solid #ddd;
+}
+
+.text-align-center {
+    text-align: center;
+}
+.text-align-left {
+  text-align: left;
+}
+.padding-left-2em {
+    padding-left: 2em;
+}
+
+.padding-left-4em {
+    padding-left: 4em;
+}
+/* cursor with loader*/
+.waiting-pointer{
+  cursor: wait;
+}
+.padding-left-1-5em {
+    padding-left: 1.5em;
+}
+
+.padding-left-3em {
+    padding-left: 3em;
+}
+
+.color-green {
+    color: green;
+    font-size: 1.3em;
+}
+
+.border-right-0-1em {
+    border-right: 0.1em solid silver;
+}
+
+
+/* end of the code for the annual-deductable-table and out-of-pocket. */
+
+.padding-5 {
+    padding: 5px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-left-0-5em {
+    padding-left: 0.5em;
+}
+
+.padding-heading-inn {
+    padding-left: 8px;
+}
+.padding-data-inn{
+    padding-left: 10px;
+}
+
+.padding-left-8 {
+  padding-left: 8px;
+}
+
+/* end of the annual and out of pocket section  */
+
+.quicklinks-pagination .pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: #337ab7 !important;
+}
+
+.quicklinks-pagination .pagination>li>a,
+.pagination>li>span {
+    padding: 5px 12px;
+}
+
+.seperator {
+    border-top: 2px solid #eee;
+}
+
+.float-right {
+    float: right;
+}
+
+.quicklinks-table-label {
+    font-size: 18px;
+}
+
+.quicklinks-footer {
+    background-color: #E0E0E0;
+}
+
+.items-per-page {
+    margin: 25px 5px;
+}
+
+.table .quicklinks-table-body>tbody>tr>td,
+.table quicklinks-table-body>tbody>tr>th,
+.table .quicklinks-table-header>thead>tr>td,
+.table .quicklinks-table-header>thead>tr>th {
+    padding: 8px 8px 8px 50px !important;
+}
+
+.quicklinks-paging {
+    float: right;
+    padding-right: 5px;
+}
+
+.header {
+    width: 100%;
+    background-color: #fff;
+}
+
+.header .navbar-inverse {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.mainHeaderColor {
+    background-color: rgba(165, 235, 239, 1);
+}
+
+@media (min-width: 768px) {
+    .navbar-nav.navbar-center {
+        position: absolute;
+        left: 45%;
+    }
+}
+
+.menu-large {
+    position: static !important;
+}
+
+.header-e.header-menu {
+    animation-delay: 1.6s;
+    -webkit-animation-delay: 1.6s;
+}
+
+.header-e.header-menu-3 {
+    animation-delay: 2.2s;
+    -webkit-animation-delay: 2.2s;
+}
+
+.header-e.header-menu-4 {
+    animation-delay: 2.5s;
+    -webkit-animation-delay: 2.5s;
+}
+
+.header-e.header-menu-5 {
+    animation-delay: 2.8s;
+    -webkit-animation-delay: 2.8s;
+}
+
+.header-e.header-menu-6 {
+    animation-delay: 3.1s;
+    -webkit-animation-delay: 3.1s;
+}
+
+.header-menu-3 .dropdown-menu {
+    left: 6px !important;
+}
+
+.search-admin-icons {
+    margin: 15px 5px 0 40px;
+}
+
+.quicklink-icons {
+    font-size: 18px;
+    font-color: black;
+    font-weight: bold;
+    margin: 18px 5px 0 40px;
+}
+
+.header .navbar {
+    margin-bottom: 10px;
+}
+
+
+/*.search-admin-icons i:hover {
+    color: blue !important;
+
+}*/
+
+.quicklink-icons:hover {
+    color: blue;
+}
+
+.sub-menu-parent {
+    position: relative;
+}
+
+.sub-menu {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    transform: translateY(-2em);
+    z-index: -1;
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+}
+
+.sub-menu-parent:active .sub-menu {
+    visibility: visible;
+    transition-delay: 0s, 0s, 0.3s;
+}
+
+.quicklinks-parent a {
+    text-decoration: none;
+}
+
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>.open>a:focus,
+.navbar-inverse .navbar-nav>.open>a:hover {
+    background-color: #eee !important;
+}
+
+.navbar-toggle:focus,
+.navbar-toggle:hover {
+    background-color: rgba(165, 235, 239, 1)!important;
+}
+
+.navbar-nav>li>a {
+    padding-bottom: 0px !important;
+}
+
+
+/*.quicklinks-parent-item {
+    padding-top: 10px;
+}*/
+
+.user-details a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+.nav .user-details .open>a,
+.nav user-details .open>a:focus,
+.nav user-details .open>a:hover {
+    background-color: #fff;
+}
+
+.member-name-main {
+    min-width: 230px !important;
+    left: -20px !important;
+    margin: 10px 0 0 !important;
+}
+
+.member-list-items {
+    margin: 5px;
+}
+
+.member-menu-item-name {
+    font-size: 20px;
+}
+
+.member-list-items:hover {
+    background-color: #eee;
+}
+
+.member-menu-item-dependent {
+    font-size: 12px;
+    padding-left: 24px;
+}
+
+.user-details a {
+    text-decoration: none;
+}
+
+.user-details a:focus {
+    text-decoration: none;
+}
+
+.drop-down-animation {
+    animation: fadeInDown .2s ease-out !important;
+    -webkit-animation: fadeInDown .2s ease-out !important;
+}
+
+.margin-top-5em {
+    margin-top: 5em;
+}
+
+/*.errorMessage {
+    background-color: #fff;
+}*/
+
+.search-results-head>.panel-primary>.panel-heading {
+    color: #333 !important;
+    background-color: #fff !important;
+    border-color: #fff !important;
+}
+
+.results-border {
+    border-style: none !important;
+}
+
+hr {
+    margin-top: 0px !important;
+    margin-bottom: 10px !important;
+    /*border: solid 1px !important;*/
+    border-color: #e0e0e0 !important;
+    /*width: 95% !important;*/
+}
+
+.spinner:before {
+    background-color: rgba(49, 37, 37, 0.2);
+    border-radius: 6px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    content: " ";
+}
+
+
+/* Admin Page or the quicklinks ejs page CSS (Start)*/
+
+.table-bordered>thead>tr>th {
+    padding-left: 10px;
+    height: 30px;
+}
+
+.edit-adminPage {
+    margin-left: 35px;
+    width: 20px;
+    height: 20px;
+}
+
+.check-adminPage {
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    margin-top: 4px;
+}
+
+.cancel-adminPage {
+    float: right;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+.btnAdminPage {
+    float: right !important;
+    height: 42px;
+    width: 140px;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.saveChanges {
+    background-color: lightgreen;
+    color: green;
+}
+
+.cancelChanges {
+    background-color: pink;
+    color: red;
+}
+
+.icon-toppadding-20 {
+    padding-top: 20px;
+}
+
+.margin-right-10 {
+    margin-right: 10px;
+}
+
+.margins {
+    margin-left: 10px !important;
+    margin-right: 550px !important;
+    width: 950px !important;
+}
+
+.width-316 {
+    width: 316px !important;
+}
+
+.width-500 {
+    width: 500px !important;
+}
+
+.font-normal {
+    font-weight: normal !important;
+}
+
+.margin-5 {
+    margin: 5px;
+}
+
+.padding-left-10 {
+    padding-left: 10px;
+}
+
+
+/* Admin Page or the quicklinks ejs page CSS (End)*/
+
+
+/* HOME & Landing page CSS or th mainPage ejs CSS (start)*/
+
+.header-Icon {
+    font-size: 18px;
+    color: white;
+    display: block;
+    padding: 10px 0 0 5px;
+}
+
+.header-tag {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    padding: 0 0 10px 5px;
+}
+
+
+/* HOME & Landing page CSS or th mainPage ejs CSS (stop)*/
+
+.loading-label {
+    font-weight: 600;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/*  Benefit EJS Style Sheet (start)  */
+
+.max-height-400 {
+    max-height: 400px;
+    /*position: relative;
+  top: -20px;*/
+}
+.bold {
+  font-weight: bold;
+}
+.padding-top-bottom-10 {
+    padding-top: 10px;
+    padding-bottom: 5px !important;
+}
+
+.padding-bottom-20 {
+    padding-bottom: 20px
+}
+
+.bg-color-f5f5f5 {
+    background-color: #f5f5f5;
+}
+
+.benefit-label {
+    background-color: #ffaa25;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+
+/* Benefit EJS Style Sheet (end)  */
+
+
+/*
+// .search-modal .modal-dialog {
+//     padding-top: 21px;
+//     padding-right: 30px;
+// }
+*/

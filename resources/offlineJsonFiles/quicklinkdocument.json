@@ -1,0 +1,165 @@
+{
+  "findDocumentResult": {
+    "documentList": {
+      "documentBaseType": "COC",
+      "documentBaseName": "Certificate of Coverage COC",
+      "documentClass": "u_emr_docs",
+      "document": [
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA1560251",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA1560252",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9c",
+          "documentName": "ECA1560253",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9d",
+          "documentName": "ECA1560254",
+          "effectiveDate": "2014-08-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9e",
+          "documentName": "ECA1560255",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-09-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA1560256",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA1560257",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA1560258",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA1560259",
+          "effectiveDate": "2015-06-10T15:08:09.000Z",
+          "expirationDate": "2016-06-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA15602510",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA15602511",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA15602512",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA15602513",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA15602514",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA15602515",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA15602516",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA15602517",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA1560251",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA15602518",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA15602519",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        },
+        {
+          "documentID": "0902b1fc8008aa9a",
+          "documentName": "ECA15602520",
+          "effectiveDate": "2015-07-10T15:08:09.000Z",
+          "expirationDate": "2015-07-10T15:08:09.000Z",
+          "contentStreamMimeType": "PDF"
+        },
+        {
+          "documentID": "0902b1fc8008aa9b",
+          "documentName": "ECA15602521",
+          "effectiveDate": "2014-07-10T15:08:09.000Z",
+          "expirationDate": "",
+          "contentStreamMimeType": "Word"
+        }
+      ]
+    }
+  }
+}

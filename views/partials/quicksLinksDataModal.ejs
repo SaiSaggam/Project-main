@@ -1,0 +1,47 @@
+<div class="row padding-10 quicklinks-data-modal" name="DOCPOPUP_FT">
+    <div class="col-lg-10 col-md-10 col-sm-10">
+        <label style="margin-left:2em; margin-top:8px; margin-left:15px;" class="quicklinks-table-label">{{documentDetails.documentBaseName}}</label>
+    </div>
+    <div class="col-lg-2 col-md-2 col-sm-2">
+        <a href="#" ng-click="closeModal()">
+            <i class="fa fa-times" style="float:right; margin-top:8px; margin-right:15px;" aria-hidden="true"></i>
+        </a>
+    </div>
+</div>
+<div class="seperator">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <table class="table table-PopUp" at-table at-paginated at-list="documentDetails.document" at-config="config">
+                <thead class="quicklinks-table-header"></thead>
+                <tbody class="quicklinks-table-body">
+                    <tr>
+                        <td at-implicit at-sortable at-attribute="documentName" width="150" at-initial-sorting="asc"></td>
+                        <td at-implicit at-sortable at-attribute="effectiveDate" width="150"></td>
+                        <td at-implicit at-sortable at-attribute="expirationDate" width="150"></td>
+                        <td width="2"><a href="#" ng-click="docSubmit(documentDetails.document[0])"><span class="glyphicon glyphicon-download-alt"></a></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="quicklinks-footer">
+        <div class="row quicklinks-pagination">
+            <div class="col-lg-5 col-md-5 col-sm-5">
+                <div class="items-per-page">
+                    ({{(documentDetails.document.length)}}) Results found - showing ({{pageStart}} - {{pageEnd}} of {{(documentDetails.document.length)}})
+                </div>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7">
+                <at-pagination class="quicklinks-paging" at-list="documentDetails.document" at-config="config" ng-click="pageNumber(getCurrentPage())"></at-pagination>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-if="false">
+    <div>
+        <div class="col-lg-12 col-md-12 col-sm-12 panel-body">
+            <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">"Benefit Search Service is temporarily down. Please try again in a few minutes. If the issue persists, please open a problem ticket with the Help Desk at 888-848-3375. Thank you."</div>
+        </div>
+    </div>
+</div>

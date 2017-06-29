@@ -1,0 +1,59 @@
+<div class="panel panel-info"name="RIDER_FT">
+    <div class="panel-heading panel-orange" ng-click="showRiderInfo()">
+    <!-- Group Rider's table heading -->  <h3 class="panel-title entire-panel-heading" ng-if="isGroupSearch">Coverage Information and Riders for ({{selectedItem.basePlanNo}})<i ng-if="!isRiderInfo" class="fa fa-plus float-right"></i><i ng-if="isRiderInfo" class="fa fa-minus float-right"></i></h3>
+    <!-- Member Rider's table heading -->  <h3 class="panel-title entire-panel-heading" ng-if="isMemberSearch">Coverage Information and Riders for {{selectedItem.coverageType}} - ({{selectedItem.planNo}})  <i ng-if="!isRiderInfo" class="fa fa-plus float-right"></i><i ng-if="isRiderInfo" class="fa fa-minus float-right"></i></h3>
+    </div>
+    <div class="panel-body" slide-toggle="isRiderInfo">
+
+        <div ng-show="memRiderLoading" class="loading-label">
+            <span><i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>Loading...</span>
+        </div>
+
+        <div class="row" ng-if="riderError">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 panel-body">
+                        <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{riderInfoErr}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" ng-if="!memRiderLoading && !riderError">
+            <div class="col-xs-2 col-sm-2 col-lg-2">
+                <div class="row-xs-1 row-sm-1 row-lg-1 rider-font-type word-wrap padding-left-8">
+                  <p><span class="subTitle ">Benefit Bundle Id : </span> <span class="subTitle-data"> {{getMemRes.benefitBundleOptionId || selectedItem.benefitBundleOptionId}}</span></p>
+                  <p><span ng-if="isMemberSearch" class="subTitle ">Benefit Bundle Name: </span> <span class="subTitle-data"> {{getMemRes.benefitBundleOptionDesc}} </span></p>
+                </div>
+            </div>
+            <div class="col-xs-9 col-sm-9 col-lg-9 scroll-hr" ng-if="!riderError">
+                <table class="table table-fixed rider-left-border">
+                    <thead >
+                    <tr>
+                        <th>Coverage Type: </th>
+                        <th>Plan Id: </th>
+                        <th>Gated: </th>
+                        <th>Carrier Name: </th>
+                        <th>Product: </th>
+                        <th>Product ID: </th>
+                        <th>Plan Type Code: </th>
+                        <th>Plan Name: </th>
+                    </tr>
+                    </thead>
+                    <tbody >
+                    <tr ng-repeat="riders in riderData.riderPlan">
+                        <td>{{riders.coverageType}}</td>
+                        <td>{{riders.benefitPlanId}}</td>
+                        <td>{{riders.gatedProductIndicator}}</td>
+                        <td>{{riders.legalName}}</td>
+                        <td>{{riders.productName}}</td>
+                        <td>{{riders.productId}}</td>
+                        <td>{{riders.planTypeCode}}</td>
+                        <td>{{riders.customerFacingPlanName}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

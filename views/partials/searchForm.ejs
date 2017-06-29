@@ -1,0 +1,311 @@
+<div class="panel-primary searchform-layout" ng-show="showSearchForm" name="SEARCHFORM_FT">
+    <div>
+        <div>
+            <a href="#" ng-click="closeModal()">
+                <i class="fa fa-times float-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <div class="font-size-16">SEARCH</div>
+    <div class="tabs">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="subHeading" ng-class="isActive('member') + ' ' + accessMemberTab()">
+                <a href="" data-target="#member-search"  ng-click="setActiveData('member')" data-toggle="tab" name="MEMBERSEARCH_FT">Member</a>
+            </li>
+            <li role="presentation"  class="subHeading" ng-class="isActive('group')" ng-click="setActiveData('group')">
+                <a href="" data-target="#group-search" data-toggle="tab" name="GROUPSEARCH_FT">Group</a>
+            </li>
+            <li role="presentation" style="float:right" ng-class="isActive('recent')" ng-click="setActiveData('recent')">
+                <a href="" style="background-color:white" data-target="#Recent-Searches" data-hover="tooltip" data-toggle="tab" data-placement="bottom" title="Recent Searches" name="RECSEARCH_FT"><i class="fa fa-history fa-lg" aria-hidden="true" style="color:black"></i></a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in" ng-class="isActive('member')" id="member-search">
+                <form name="SEARCHFORM_FT" novalidate>
+                    <fieldset>
+                        <div class="form-group row">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="padding">
+                                    <label class="searchFormLabels">Search by:</label>
+                                    <select class="form-control inputBoxes centerInput" ng-model="value" init="value" style="margin: auto;" ng-change="dropdownValue(value);" name="DROPDOWN_FT">
+                                        <option value="memberId" name="MEMBERID_SEARCH_FT">Member ID</option>
+                                        <option value="name" name="NAME_SEARCH_FT">Name</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row" ng-show="isMemberIdSearch">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <div class="form-group">
+                                        <label class="searchFormLabels">Member ID<span class="requiredStar"> *</span></label>
+                                        <input class="formInputs form-control inputBoxes" ng-model="req.memberId" ng-model-options="{ allowInvalid: true}" ng-class="{redBox: memberIdError}" name="MEMBERID_FT" ng-pattern="/^\d+$/" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <label class="searchFormLabels">Coverage Start Date</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="MEM_STARTDATE_FT" uib-datepicker-popup="{{format}}" ng-model="req.memberIdStartDate" ng-model-options="modelOptions" is-open="startDatePopup.opened" datepicker-options="startDateOps" ng-pattern="/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20|99)?[0-9]{2})*$/" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openStartDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <label class="searchFormLabels">Coverage End Date</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="MEM_STOPDATE_FT" uib-datepicker-popup="{{format}}" ng-model="req.memberIdStopDate" ng-pattern="/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20|99)?[0-9]{2})*$/" ng-model-options="modelOptions" is-open="endDatePopup.opened" datepicker-options="endDateOps" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openEndDate('memberId')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                        </div>
+                        <div class="form-group row" ng-hide="isMemberIdSearch">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <label class="searchFormLabels">Last Name <span class="requiredStar"> *</span></label>
+                                    <input class="formInputs form-control inputBoxes" ng-class="{redBox: lastNameError}" ng-model="req.lastName" ng-model-options="{allowInvalid: true}" ng-pattern="/^[a-zA-Z*]+$/" type="text" name="LASTNAME_FT" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="formInputs">
+                                    <label class="searchFormLabels">First Name</label>
+                                    <input class="formInputs formInputs form-control inputBoxes" ng-model="req.firstName" ng-model-options="{ allowInvalid: true}" ng-pattern="/^[a-zA-Z*]+$/" type="text" name="FIRSTNAME_FT">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <label class="searchFormLabels">Date of Birth</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="MM-DD-YYYY" class="form-control" uib-datepicker-popup="{{format}}" ng-model="req.dob" ng-model-options="modelOptions" is-open="memberDOBPopup.opened" datepicker-options="memberDOBDateOps" ng-pattern="/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$/" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openMemberDOBDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row" style="padding-top: 10px;" ng-hide="isMemberIdSearch">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <label class="searchFormLabels">Zip Code <span class="requiredStar"> *</span></label>
+                                    <label class="searchFormLabels float-right"> or</label>
+                                    <input class="formInputs form-control inputBoxes" ng-model="req.zipCode" ng-model-options="{ allowInvalid: true}" ng-class="{redBox: zipOrState && !req.state}" ng-minLength="5" ng-required="!(req.zipCode.length || req.state.length)" name="ZIP_FT" maxlength="5" ng-pattern="/^\d+$/">
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <label class="searchFormLabels">State <span class="requiredStar"> *</span></label>
+                                    <select class="form-control inputBoxes centerInput" name="STATE_FT" id="repeatSelect" ng-model="req.state" ng-class="{redBox: zipOrState && !req.zipCode}" ng-required="!(req.zipCode.length || req.state.length)">
+                                        <option ng-repeat="option in stateData" value="{{option.id}}">{{option.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row padding-top-5" ng-hide="isMemberIdSearch">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <label class="searchFormLabels">Coverage Start Date</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="NAM_STARTDATE_FT" uib-datepicker-popup="{{format}}" ng-model="req.nameStartDate" ng-model-options="modelOptions" is-open="startDatePopup.opened" datepicker-options="startDateOps" ng-pattern="/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20|99)?[0-9]{2})*$/" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openStartDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <label class="searchFormLabels">Coverage End Date</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="NAM_STOPDATE_FT" uib-datepicker-popup="{{format}}" ng-model="req.nameStopDate" ng-model-options="modelOptions" is-open="endDatePopup.opened" datepicker-options="endDateOps" ng-pattern="/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20|99)?[0-9]{2})*$/" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openEndDate('name')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                                <button class="btn buttomSearchButton" style="width: 45%; width: 45%;font-weight: bold;font-size: 14px; color: #FFFFFF;" type="submit" value="SEARCH" ng-click="submitMemberReq();" name="SEARCHBTN_FT">SEARCH
+                                </button>
+                                <button class="buttomSearchButton btn" style="margin-left: 10px; font-size: 14px; font-weight: bold; background-color: white; border: thin solid #2D2D39; color: #2D2D39; width: 45%;" ng-click="resetForm();">CLEAR
+                                </button>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2" style="float:right; padding-top:4em;">
+                                <div class="requiredStar subTitle-data">* Required inputs</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 panel-body" ng-show="(showErrorMsg || hasMoreResults)">
+                            <hr>
+                            <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{searchErrMsg}}</div>
+                        </div>
+                        <!-- <div class="col-lg-12 col-md-12 col-sm-12 panel-body errorMessage" ng-show="showErrorMsg" ng-if="hasMoreResults">
+                            <hr>
+                            <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{hasMoreResult}}</div>
+                        </div> -->
+                    </fieldset>
+                </form>
+            </div>
+            <div class="tab-pane fade in" ng-class="isActive('group')" id="group-search">
+                <form name="GSEARCHFORM_FT" novalidate>
+                    <fieldset>
+                        <div class="form-group row">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div class="padding">
+                                    <label class="searchFormLabels">Search by:</label>
+                                    <select class="form-control inputBoxes centerInput" ng-model="val" init="val" style="margin: auto;" ng-change="grpDropdownValue(val);" name="GRPDROPDOWN_FT">
+                                        <option value="groupNo" name="GROUPID_SEARCH_FT">Group Number</option>
+                                        <option value="groupName" name="GROUPNAME_SEARCH_FT">Group Name</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row" ng-show="isGroupNoSearch">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <div class="form-group">
+                                        <label class="searchFormLabels">Group# <span class="requiredStar"> *</span></label>
+                                        <input class="formInputs form-control inputBoxes" ng-model="groupReq.groupNo" ng-class="{redBox: groupNoError}"name="GROUPNO_FT" ng-pattern="/^\d+$/" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <div class="form-group">
+                                        <label class="searchFormLabels">Benefit Bundle Option Id </label>
+                                        <input class="formInputs form-control inputBoxes" ng-model="groupReq.groupNoBboid" ng-model-options="{ allowInvalid: true}" type="text"  name="BBOID_FT" ng-pattern="/^\d+$/" />
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="form-group row padding-top-10" ng-show="isGroupNoSearch">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <label class="searchFormLabels">Coverage Start Date</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="GNO_STOPDATE_FT" uib-datepicker-popup="{{format}}" ng-model="groupReq.groupStartDate" ng-model-options="modelOptions" is-open="startDatePopup.opened" datepicker-options="startDateOps" ng-pattern="/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20|99)?[0-9]{2})*$/" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openStartDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <label class="searchFormLabels">Coverage End Date</label>
+                                <div class="input-group">
+                                    <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="GNO_STOPDATE_FT" uib-datepicker-popup="{{format}}" ng-model="groupReq.groupStopDate" ng-model-options="modelOptions" is-open="endDatePopup.opened" datepicker-options="endDateOps" ng-pattern="/^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20|99)?[0-9]{2})*$/" close-text="Close" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="openEndDate('groupNo')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4"></div>
+                        </div>
+                        <div class="form-group row" ng-hide="isGroupNoSearch">
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <label class="searchFormLabels">Group Name <span class="requiredStar"> *</span></label>
+                                    <input class="formInputs form-control inputBoxes" ng-class="{redBox: groupNameError}" ng-model="groupReq.groupName"  type="text" name="GROUPNAME_FT" required>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <label class="searchFormLabels">State <span class="requiredStar"> *</span></label>
+                                    <select class="form-control inputBoxes centerInput" name="GSTATE_FT" id="repeatSelect" ng-model="groupReq.state" ng-class="{redBox: noState}" ng-required="!(groupReq.state.length)" >
+                                        <option ng-repeat="option in stateData" value="{{option.id}}">{{option.name}}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-3 col-sm-3">
+                                <div>
+                                    <label class="searchFormLabels">Benefit Bundle Option Id </label>
+                                    <input class="formInputs form-control inputBoxes"  ng-model="groupReq.groupNameBboid"  ng-model-options="{ allowInvalid: true}" type="text"  name="BBOID_FT" ng-pattern="/^\d+$/" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row padding-top-10" ng-hide="isGroupNoSearch">
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="searchFormLabels">Coverage Start Date</label>
+                                    <div class="input-group">
+                                        <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="GNA_STARTDATE_FT" uib-datepicker-popup="{{format}}" ng-model="groupReq.gNameStartDate" ng-model-options="modelOptions" is-open="startDatePopup.opened" datepicker-options="startDateOps" close-text="Close" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="openStartDate()"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3">
+                                    <label class="searchFormLabels">Coverage End Date</label>
+                                    <div class="input-group">
+                                        <input type="text" placeholder="MM-DD-YYYY" class="form-control" name="GNA_STOPDATE_FT" uib-datepicker-popup="{{format}}" ng-model="groupReq.gNameStopDate" ng-model-options="modelOptions" is-open="endDatePopup.opened" datepicker-options="endDateOps" close-text="Close" />
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default" ng-click="openEndDate('groupName')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
+                                <button class="btn buttomSearchButton" style="width: 45%; width: 45%;font-weight: bold;font-size: 14px; color: #FFFFFF;" type="submit" value="SEARCH" ng-click="submitGroupReq();" name="GSEARCHBTN_FT">SEARCH
+                                </button>
+                                <button class="buttomSearchButton btn" style="margin-left: 10px; font-size: 14px; font-weight: bold; background-color: white; border: thin solid #2D2D39; color: #2D2D39; width: 45%;" ng-click="resetForm();">CLEAR
+                                </button>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2" style="float:right; padding-top:4em;">
+                                <div class="requiredStar subTitle-data">* Required inputs</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 panel-body" ng-show="showGrpErrorMsg">
+                            <hr>
+                            <div class="searchFormErrorMsgBox" name="GERRORMSG_FT">{{searchErrMsg}}</div>
+                            <!-- <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{hasMoreResults}}</div> -->
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="tab-pane fade in padding" ng-class="isActive('recent')" id="Recent-Searches">
+                <div class="subHeading">Recent Searches by:</div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 recentSearchTable">
+                        <div class="subHeading">MEMBER</div>
+                        <table class="table-hover" border="0" style="width:100%">
+                            <thead class="subTitle">
+                            <tr style="border-bottom: solid 1px">
+                                <th>MemberID </th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                            </tr>
+                            </thead>
+                            <tbody class="word-wrap subTitle-data">
+                            <tr ng-repeat="eachMemSearch in recMemSearches | orderBy:'-'">
+                                <td ng-click="memberSubmit(eachMemSearch); closeModal();">{{ eachMemSearch.memberId.id }}</td>
+                                <td ng-click="memberSubmit(eachMemSearch); closeModal();">{{ eachMemSearch.firstName }}</td>
+                                <td ng-click="memberSubmit(eachMemSearch); closeModal();">{{ eachMemSearch.lastName }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 recentSearchTable">
+                        <div class="subHeading">GROUP</div>
+                        <table class="table-hover" border="0" style="width:100%">
+                            <thead class="subTitle">
+                            <tr style="border-bottom: solid 1px">
+                                <th>Group #</th>
+                                <th>Group Name </th>
+                                <th>State </th>
+                                <th>Bundle Option ID</th>
+                            </tr>
+                            </thead>
+                            <tbody class="word-wrap subTitle-data">
+                            <tr ng-repeat="eachGroupSearch in recGroupSearches" ng-click="groupSubmit(eachGroupSearch); closeModal();">
+                                <td>{{ eachGroupSearch.groupNo }}</td>
+                                <td>{{ eachGroupSearch.groupName }}</td>
+                                <td>{{ eachGroupSearch.state }}</td>
+                                <td>{{ eachGroupSearch.benefitBundleOptionId }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

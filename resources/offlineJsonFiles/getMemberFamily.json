@@ -1,0 +1,46 @@
+{
+  "memberFamily": [
+    {
+      "surrogateKey": "894666810",
+      "memberId": {
+        "id": "59651144201",
+        "type": "MCH",
+        "sourceSysCode": "CR"
+      },
+      "firstName": "Alan",
+      "lastName": "Porter",
+      "dob": "1999-03-05",
+      "gender": "F",
+      "address": "5 Riverside Circle, Ellington, CT 06029, US",
+      "relationship":"Spouse"
+    },
+    {
+      "surrogateKey": "894666811",
+      "memberId": {
+        "id": "59651144202",
+        "type": "MCH",
+        "sourceSysCode": "CR"
+      },
+      "firstName": "Melissa",
+      "lastName": "Porter",
+      "dob": "2007-03-05",
+      "gender": "F",
+      "address": "49737 Hoard Way, Melrose, CT 06016, US",
+      "relationship":"Child"
+    },
+    {
+      "surrogateKey": "894666812",
+      "memberId": {
+        "id": "59651144203",
+        "type": "MCH",
+        "sourceSysCode": "CR"
+      },
+      "firstName": "Sarah",
+      "lastName": "Porter",
+      "dob": "2015-03-05",
+      "gender": "M",
+      "address": "5 Riverside Circle, Ellington, CT 06029, US",
+      "relationship":"Child"
+    }
+  ]
+}

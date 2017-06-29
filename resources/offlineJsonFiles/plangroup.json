@@ -1,0 +1,161 @@
+//Plan group search Request:
+
+{
+"groupid":"",
+"planid":"",
+"policyEffdate":""
+}
+
+//Plan group search :Response
+
+{
+  "groupplanInfo": [
+    {
+      "policyId": "15648616",
+      "planId": "234",
+      "product": "HMO",
+      "effectiveDate": "10/23/2004",
+      "endDate": "10/23/2004",
+      "groupName": "Best Buy"
+    },
+    {
+      "policyId": "15648616",
+      "planId": "234",
+      "product": "HMO",
+      "effectiveDate": "10/23/2004",
+      "endDate": "10/23/2004",
+      "groupName": "Best Buy"
+    }
+  ]
+}
+
+//Membership response:
+
+
+{
+  "membership": [
+    {
+      "planCode": "urn:uuid:f1e9c8ef-8a20-4896-a2ee-ecf112338975",
+      "coverageType": "Medical",
+      "group": "HMO",
+      "policy": "000737",
+      "planType": "HMO",
+      "gated": "Y",
+      "product": "MEDN5",
+      "startDate": "2016-01-01",
+      "stopDate": "9999-12-31",
+      "Deductible": {
+        "individual_ytd_IN": "1500",
+        "family_ytd_IN": "100",
+        "family_ytd_OUT": "500",
+        "individual_OUT": "4432"
+      },
+      "OutOfPocket": {
+        "individual_ytd_IN": "1000",
+        "family_ytd_IN": "1000",
+        "individual_ytd_OUT": "1000",
+        "family_ytd_OUT": "1000"
+      },
+      "PlanLifetimeMax": {
+        "individual_rem_IN": "4500",
+        "family_rem_IN": "3000",
+        "individual_rem_OUT": "20000",
+        "family_rem_OUT": "26500"
+      },
+      "copay": {
+        "individual_IN": "234",
+        "family_IN": "2335",
+        "individual_OUT": "234",
+        "family_OUT": "2335"
+      },
+      "coinsurance": {
+        "individual_IN": "10",
+        "family_IN": "20",
+        "individual_OUT": "10",
+        "family_OUT": "20"
+      }
+    },
+    {
+      "planCode": "urn:uuid:f1e9c8ef-8a20-4896-a2ee-ecf112338975",
+      "coverageType": "Dental",
+      "group": "HMO",
+      "policy": "000737",
+      "planType": "HMO",
+      "gated": "Y",
+      "product": "MEDN5",
+      "startDate": "2016-01-01",
+      "stopDate": "9999-12-31",
+      "Deductible": {
+        "individual_ytd_IN": "1500",
+        "family_ytd_IN": "100",
+        "family_ytd_OUT": "500",
+        "individual_OUT": "4432"
+      },
+      "OutOfPocket": {
+        "individual_ytd_IN": "1000",
+        "family_ytd_IN": "1000",
+        "individual_ytd_OUT": "1000",
+        "family_ytd_OUT": "1000"
+      },
+      "PlanLifetimeMax": {
+        "individual_rem_IN": "4500",
+        "family_rem_IN": "3000",
+        "individual_rem_OUT": "20000",
+        "family_rem_OUT": "26500"
+      },
+      "copay": {
+        "individual_IN": "234",
+        "family_IN": "2335",
+        "individual_OUT": "234",
+        "family_OUT": "2335"
+      },
+      "coinsurance": {
+        "individual_IN": "10",
+        "family_IN": "20",
+        "individual_OUT": "10",
+        "family_OUT": "20"
+      }
+    },
+    {
+      "planCode": "urn:uuid:f1e9c8ef-8a20-4896-a2ee-ecf112338975",
+      "coverageType": "Pharmacy",
+      "group": "HMO",
+      "policy": "000737",
+      "planType": "HMO",
+      "gated": "Y",
+      "product": "MEDN5",
+      "startDate": "2016-01-01",
+      "stopDate": "9999-12-31",
+      "Deductible": {
+        "individual_ytd_IN": "1500",
+        "family_ytd_IN": "100",
+        "family_ytd_OUT": "500",
+        "individual_OUT": "4432"
+      },
+      "OutOfPocket": {
+        "individual_ytd_IN": "1000",
+        "family_ytd_IN": "1000",
+        "individual_ytd_OUT": "1000",
+        "family_ytd_OUT": "1000"
+      },
+      "PlanLifetimeMax": {
+        "individual_rem_IN": "4500",
+        "family_rem_IN": "3000",
+        "individual_rem_OUT": "20000",
+        "family_rem_OUT": "26500"
+      },
+      "copay": {
+        "individual_IN": "234",
+        "family_IN": "2335",
+        "individual_OUT": "234",
+        "family_OUT": "2335"
+      },
+      "coinsurance": {
+        "individual_IN": "10",
+        "family_IN": "20",
+        "individual_OUT": "10",
+        "family_OUT": "20"
+      }
+    }
+  ]
+}

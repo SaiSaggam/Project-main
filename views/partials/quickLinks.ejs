@@ -1,0 +1,64 @@
+
+
+    <div class="panel padding-10 heading">
+        <a href="" ng-click="closeAdminPage(); save = false; cancel = false" ><img src="lib/images/back-button.png"/> BACK</a>
+    </div>
+
+<p class="margin-top-25 heading padding-left-10">EDIT</p>
+<div class="panel panel-default row margins">
+
+    <div class=" col-lg-12 col-md-12 col-sm-12 margin-right-10" >
+        <form name="editForm">
+
+            <div class="subHeading padding-10" style="font-weight: bold">Additional Links:</div>
+            <table class="table-bordered subTitle">
+                <thead>
+                <tr>
+                    <th>TITLE</th>
+                    <th>URL</th>
+                    <th>TOOLS</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="(i,cont) in form.links">
+                    <td class="width-316">
+                        <label ng-hide="cont.id" class="padding-left-10 font-normal">{{cont.title}}</label>
+                        <input ng-show="cont.id" class="width-316 margin-5"  type="text" ng-model="cont.title" />
+                    </td>
+                    <td class="width-500">
+                        <label ng-hide="cont.id" class="padding-left-10 font-normal">{{cont.url}}</label>
+                        <input ng-show="cont.id" class="width-500 margin-5" type="text"  ng-model="cont.url" />
+                    </td>
+                    <td style="width:10%">
+                      <img src="lib/images/edit.png" ng-hide="cont.id" ng-click="cont.id=true" class="edit-adminPage" data-placement="bottom" title="Edit" />
+
+                      <img src="lib/images/check-button.png" ng-show="cont.id" ng-click="cont.id=false" class="check-adminPage" data-placement="bottom" title="Confirm" />
+                        <!-- <button  ng-hide="cont.id" ng-click="cont.id=true">Edit</button>
+                        <button ng-show="cont.id" ng-click="cont.id=false">Save</button> -->
+                        <img src="lib/images/remove.png" ng-show="cont.id" ng-click="deleteRow(i)" class="cancel-adminPage" data-placement="bottom" title="Delete"/>
+                        <!-- <a href="#" ng-show="cont.id" ng-click="deleteRow(i)" >
+                            <span style=" color:red; font-size: 24px;" class="glyphicon glyphicon-remove-sign"></span>
+                        <
+                        /a> -->
+
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <div class="icon-toppadding-20">
+                <img src="lib/images/add.png" ng-click="addFields(form);" class="check-adminPage" data-placement="bottom" title="Add New Row"/>
+            </div>
+            <div class="padding-top-10">
+            <div ng-show="save" class="saveChanges"> Changes Saved </div>
+            <div ng-show="cancel" class="cancelChanges" > Changes Cancelled </div>
+            </div>
+            <div>
+
+                <button class="btnAdminPage" style=" color: #2D2D39; background-color:#FFFFFF;" type="submit" ng-click="Cancel(); cancel=true; save=false">CANCEL</button>
+                <button class="btnAdminPage" style=" color: #FFFFFF; background-color:#196ECF;" type="submit" ng-click="submit(form); save=true ; cancel=false">SAVE</button>
+            </div>
+        </form>
+    </div>
+</div>

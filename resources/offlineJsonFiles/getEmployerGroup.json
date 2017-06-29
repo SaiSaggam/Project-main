@@ -1,0 +1,21 @@
+{
+  "employeeCount": 100,
+  "benefitBundles": [
+    {
+      "basePlanDesc": "CTSM SMART HSA HMO D40/D50 ER D/200",
+      "basePlanNo": "M000000082",
+      "networkScheduleId": "",
+      "coverageStartDate": "2017-01-01",
+      "coverageExpiryDate": "2017-10-31",
+      "benefitBundleOptionId": "1940004"
+    },
+    {
+      "basePlanDesc": "CTSM SMART HSA HMO D30/D50 ER D/200",
+      "basePlanNo": "M000000016",
+      "networkScheduleId": "",
+      "coverageStartDate": "2017-01-01",
+      "coverageExpiryDate": "2017-12-31",
+      "benefitBundleOptionId": "1930005"
+    }
+  ]
+}

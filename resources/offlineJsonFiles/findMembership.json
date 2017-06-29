@@ -1,0 +1,55 @@
+{
+    "memberships": [{
+        "systemCode": "CR",
+        "planCode": "urn:uuid:f1e9c8ef-8a20-4896-a2ee-ecf112338975",
+        "coverageType": "Medical",
+        "plan": "HMO",
+        "planNo": "23456",
+        "relationship": "Self",
+        "group": "Apple",
+        "groupNo": "000737",
+        "product": "MEDN5",
+        "startDate": "2016-06-21",
+        "stopDate": "9999-12-31"
+
+    }, {
+        "systemCode": "CR",
+        "planCode": "urn:uuid:f1e9c8ef-8a20-4896-a2ee-ecf112338975",
+        "coverageType": "Medical",
+        "plan": "HMO",
+        "planNo": "23456",
+        "relationship": "Self",
+        "group": "Tesla",
+        "groupNo": "000737",
+        "product": "MEDN5",
+        "startDate": "2016-04-14",
+        "stopDate": "9999-12-31"
+
+    }, {
+        "systemCode": "CS",
+        "planCode": "urn:uuid:f1e9c8ef-8a20-4896-a2ee-ecf112338975",
+        "coverageType": "Dental",
+        "plan": "HMO",
+        "planNo": "23456",
+        "relationship": "Self",
+        "group": "Google",
+        "groupNo": "000737",
+        "product": "MEDN5",
+        "startDate": "2016-01-01",
+        "stopDate": "9999-12-31"
+
+    }, {
+        "systemCode": "CS",
+        "planCode": "urn:uuid:f1e9c8ef-8a20-4896-a2ee-ecf112338975",
+        "coverageType": "Pharmacy",
+        "plan": "HMO",
+        "planNo": "23456",
+        "relationship": "Self",
+        "group": "UHC",
+        "groupNo": "000737",
+        "product": "MEDN5",
+        "startDate": "2016-11-14",
+        "stopDate": "9999-12-31"
+
+    }]
+}

@@ -1,0 +1,45 @@
+<div class="panel panel-info" name="COVERAGESECTION_FT">
+    <div class="panel-heading panel-blue" ng-click="showGroupInfo()">
+        <h4 class="panel-title entire-panel-heading">Coverage Information for Group: {{grpDetails.groupNo}}<i ng-if="!isOpenGroupInfo" class="fa fa-plus float-right"></i><i ng-if="isOpenGroupInfo" class="fa fa-minus float-right"></i></h4>
+    </div>
+    <div class="panel-body" slide-toggle="isOpenGroupInfo">
+        <div class="scroll-hr">
+
+            <div ng-if="groupCoverageInfoLoad" class="loading-label">
+                    <span><i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>Loading...</span>
+                </div>
+            <div ng-if="showGroupCoverageInfoErr">
+                       <div class="col-lg-12 col-md-12 col-sm-12 panel-body ">
+                           <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{GroupCoverageInfoError}}</div>
+                       </div>
+                   </div>
+            <table class="table table-hover table-fixed Covtable-color" ng-if="!showGroupCoverageInfoErr">
+                <thead>
+                    <tr>
+                        <th>Base Plan Descr: </th>
+                        <th>Base Plan#:</th>
+                        <th>Metallic Level: </th>
+                        <th>Network Schedule ID: </th>
+                        <th>Coverage Start Date: </th>
+                        <th>Coverage End Date: </th>
+                        <th>Bundle Option ID:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="groupStatic in groupRes.benefitBundles track by $index" name="CVRTYPEVALUE_FT" ng-click="submitGroupCoverageType(groupStatic, $index);">
+                        <td>
+                            <input type="radio" name="groupStatic" ng-checked="selectedRow == $index"/> {{groupStatic.basePlanDesc}}
+                        </td>
+                        <td>{{groupStatic.basePlanNo}}</td>
+                        <td>{{groupStatic.metallicLevel}}</td>
+                        <td>{{groupStatic.networkScheduleId[0]}}</td>
+                        <td>{{groupStatic.coverageStartDate}}</td>
+                        <td>{{groupStatic.coverageExpiryDate}}</td>
+                        <td>{{groupStatic.benefitBundleOptionId}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="padding-top-10"></div>

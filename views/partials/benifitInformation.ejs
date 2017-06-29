@@ -1,0 +1,54 @@
+<div class="navbar-fixed ">
+  <div class="panel panel-info"name="BENEFITNAME_FT">
+    <div class="panel-heading panel-orange">
+    <h4 class="panel-title entire-panel-heading" >Benefit Information </h4>
+  </div>
+  <div  ng-if="!benefitError" class="padding-top-bottom-10 benefitLetters">
+    <button class="alphabet"  ng-click="activateLetter('')" ng-class="{'border-active':activeLetter==''}" >ALL <i ng-show="returnActive('').bool" class="fa fa-caret-down" aria-hidden="true"></i>  </button>
+      <button ng-repeat="letter in alphabet track by $index" ng-click="activateLetter(letter); returnActive(letter);" class="alphabet" ng-disabled="isDisabled(letter).boolean" ng-class="isDisabled(letter).toggle + ' ' + returnActive(letter).style" name="{{letter}}_FT">{{letter}} <i ng-show="returnActive(letter).bool" class="fa fa-caret-down" aria-hidden="true"></i>  </button>
+  </div>
+</div>
+<div class="benifits-accordian max-height-400">
+    <div class="row padding-bottom-20" ng-if="!benefitError">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div ng-if="benifitLangLoading" class="loading-label">
+                <span><i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>Loading...</span>
+            </div>
+            <uib-tabset active="active" ng-if="!benifitLangLoading && !benefitError">
+                <uib-accordion close-others="true" ng-repeat="benifit in benefitLangReq.benefits | startsWithLetter : activeLetter | orderBy: 'benefitName'" name="BENEFITLIST_FT">
+                    <div uib-accordion-group class="panel-defaul font-size-12" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled" ng-click = "status.isFirstOpen=status.isFirstOpen?false:true">
+                        <uib-accordion-heading>
+                            <span class="padding-left-10" ng-click = "status.isFirstOpen=status.isFirstOpen?false:true" name="BENEFITNAME_FT">{{benifit.benefitName}}</span><i class="pull-left" ng-click = "status.isFirstOpen=status.isFirstOpen?false:true" ng-class="{'fa fa-minus ': status.isFirstOpen, 'fa fa-plus': !status.isFirstOpen}"></i>
+                        </uib-accordion-heading>
+                        <div class="row">
+                            <div ng-repeat="benifitSub in benifit.benefitSubsection" name="LANGUAGE_FT">
+                              <div class="col-lg-4 col-md-4 col-sm-4" >
+                                <p class="font-size-12 padding-top-10 padding-left-10 bold">Comments</p>
+                                <p class="font-size-12  padding-left-10">{{benifitSub.general}}</p>
+                              </div >
+                                <div class="col-lg-4 col-md-4 col-sm-4" >
+                                    <p class="font-size-12 padding-top-10 padding-left-10 bold">In Network</p>
+                                    <p class="font-size-12  padding-left-10">{{benifitSub.INN}}</p>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4" >
+                                    <p class="font-size-12 padding-top-10 padding-left-10 bold">Out Network</p>
+                                    <p class="font-size-12  padding-left-10">{{benifitSub.OON}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </uib-accordion>
+            </uib-tabset>
+        </div>
+    </div>
+</div>
+<div class="row" ng-if="benefitError">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div>
+            <div class="col-lg-12 col-md-12 col-sm-12 panel-body">
+                <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{benefitInfoError}}</div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

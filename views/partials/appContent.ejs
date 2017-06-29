@@ -1,0 +1,177 @@
+<div>
+<!-- <div ng-controller="masterCtrl"> -->
+<div class="header">
+    <nav class="navbar navbar-inverse navbar-fixed-top ">
+        <div class="container-fluid">
+            <div class="navbar-header mainHeaderColor">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" ng-if="!isAdminPage">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="header-title"><b>Benefit Eligibility And Coverage Hub </b></span>
+                <span class="header-info" ng-cloak> {{userInfo.firstName}} {{userInfo.lastName}} logged at {{currentLogin}}</span>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-center" ng-if="!isAdminPage">
+                  <li class="navbar-text" ng-if="showGroupName">
+                    <div class="group-details" ng-cloak>
+                      <span class="">
+                        <img src="lib/images/group.png"/> {{grpDetails.groupName}}
+                      </span>
+                    </div>
+                  </li>
+                    <li class="navbar-text" ng-if="showUserName">
+                        <div class="user-details">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" ng-cloak>
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span class="userName">{{indvDetails.firstName}} {{indvDetails.lastName}} <i class="fa fa-spinner fa-spin" ng-if="showMemberDepedentSpinner"></i><i class="caret" ng-if="showMemberDepedentDetails"></i>
+                            </a>
+                            <ul class="dropdown-menu member-name-main mega-menu-animation" style="max-height:250px;" ng-show="showMemberDepedentDetails">
+                                <li class="member-list-items" ng-repeat="individualDetails in memberDepedentDetails" ng-click="getMembershipForDependents(individualDetails)">
+                                    <div class="member-menu-item-name">
+                                        <i class="glyphicon glyphicon-user"></i>
+                                        <span>{{individualDetails.firstName}} {{individualDetails.lastName}}</span>
+                                    </div>
+                                    <div class="member-menu-item-dependent">
+                                        <span class="">{{individualDetails.relationship}}</span>
+                                    </div>
+                                </li>
+                                <li ng-show="familyError">
+                                    <div class="row">
+                                    <div class="col-sm-12 col-md-12 col-lg-12">
+                                        <div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 panel-body ">
+                                                <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{familyInfoErr}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right padding-right-3" ng-if="!isAdminPage">
+                    <li class="" ng-if="showQuickLink" data-placement="bottom" title="Quick Links">
+                        <a data-toggle="dropdown" name="QUICKLINKS_FT" role="button" aria-haspopup="true" aria-expanded="false" ng-cloak>
+                            <span style="padding-left:10px;"><img src="lib/images/link.png" /><i class="fa fa-caret-down fa-2x caretColor" style="padding-left:10px;" aria-hidden="true"></i></span></a>
+                        <ul class="dropdown-menu mega-menu-animation word-wrap">
+                            <li class="dropdown-header">Documents</li>
+                            <li ng-click="openQuickLinksModal('SBC')" name="SBC_FT"><a href="#">Summary of Benefits & Coverage(SBC)</a></li>
+                            <li ng-click="openQuickLinksModal('MHB')" name="COC_FT"><a href="#">Member Handbook (MHB)</a></li>
+                            <li name="SPD_FT"><a href="#" class="disabled" style="color: grey !important;">Summary Plan Document(SPD)</a></li><li class="divider"></li>
+                            <li class="dropdown-header">Additional Links</li>
+                            <li ng-repeat="link in resQuickLinks">
+                                <a href="{{link.url}}" target="_blank">{{link.title}}</a>
+                            </li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="" ng-if="showQuickLinkGroup" data-placement="bottom" title="Quick Links">
+                        <a data-toggle="dropdown" name="QUICKLINKS_FT" role="button" aria-haspopup="true" aria-expanded="false" ng-cloak>
+                            <span style="padding-left:10px;"><img src="lib/images/link.png" /><i class="fa fa-caret-down fa-2x caretColor" style="padding-left:10px;" aria-hidden="true"></i></span></a>
+                        <ul class="dropdown-menu mega-menu-animation word-wrap">
+                            <li class="dropdown-header">Additional Links</li>
+                            <li ng-repeat="link in resQuickLinks">
+                                <a href="{{link.url}}" target="_blank">{{link.title}}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <div class="search-admin-icons" data-placement="bottom" title="Admin" >
+                        <a href="" ng-click="openAdmin()" ng-if="isAdminRole" ng-cloak><img src="lib/images/admin.png" / > </a>
+                        <a href="" ng-if="!isAdminRole"> <img src="lib/images/admin-grey.png" /> </a>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="search-admin-icons" data-placement="bottom" title="Search">
+                      <a href="">      <span><img src="lib/images/search.png" ng-click="open()" />
+                              <!-- <i class="fa fa-search" ng-click="open()"></i> -->
+                            </span> </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<div class="container-fluid margin-top-5em">
+    <div ng-hide="isAdminPage">
+        <div ng-controller="memberResultCtrl">
+            <div class="row ">
+                <div class="col-sm-12 col-md-12 col-lg-12" ng-show="showMemberGrid">
+                    <div ng-include="'/partials/userSummaryGrid.ejs'"></div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-12 col-md-12 col-lg-12" ng-show="showGroupGrid">
+                    <div ng-include="'/partials/groupSummaryGrid.ejs'"></div>
+                </div>
+            </div>
+            <div ng-show="showMembership">
+                <div ng-if="isMemberSearch">
+                    <span class="waiting-pointer" us-spinner="{radius:30, width:8, length: 16}" spinner-on="beachSpinner"></span>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div ng-include="'/partials/coverageType.ejs'"></div>
+                        </div>
+                    </div>
+                  </div>
+                <div ng-if="isGroupSearch">
+                    <span class="waiting-pointer" us-spinner="{radius:30, width:8, length: 16}" spinner-on="beachSpinner"></span>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div ng-include="'/partials/groupCoverageType.ejs'"></div>
+                        </div>
+                    </div>
+                  </div>
+                  <div ng-show="showPanels">
+                    <div class="row">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div ng-include="'/partials/ridersInformation.ejs'"></div>
+                      </div>
+                    </div>
+                    <div class="row ">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div ng-include="'/partials/coverageOverview.ejs'"></div>
+                      </div>
+                    </div>
+                    <div class="padding-top-10"></div>
+                    <div class="row ">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div ng-include="'/partials/benifitInformation.ejs'"></div>
+                      </div>
+                    </div>
+                  </div>
+                    <!-- <div  ng-show="showGroupPanels">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div ng-include="'/partials/groupRidersInformation.ejs'"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div ng-include="'/partials/groupCoverageOverview.ejs'"></div>
+                        </div>
+                    </div>
+                    <div class="padding-top-10"></div>
+                    <div class="row ">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div ng-include="'/partials/benifitInformation.ejs'"></div>
+                        </div>
+                    </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <div ng-show="isAdminPage">
+        <div ng-controller="quickLinksCtrl"  name="ADMINPAGE_FT">
+            <div ng-include="'/partials/quickLinks.ejs'"></div>
+        </div>
+    </div>
+<!-- </div> -->
+</div>

@@ -1,0 +1,67 @@
+<div class="panel panel-info" name="COVERAGESECTION_FT">
+    <div class="panel-heading panel-blue" ng-click="showMemberInfo()">
+        <h4 class="panel-title entire-panel-heading">Coverage Information <i ng-if="!isOpenMemberInfo" class="fa fa-plus float-right"></i><i ng-if="isOpenMemberInfo" class="fa fa-minus float-right"></i></h4>
+    </div>
+    <div class="panel-body" slide-toggle="isOpenMemberInfo">
+        <div class="scroll-hr">
+            <div>
+              <div ng-if="memberCoverageInfoLoad" class="loading-label">
+                    <span><i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>Loading...</span>
+                </div>
+                    <div ng-if="showCoverageInfoError">
+                        <div class="col-lg-12 col-md-12 col-sm-12 panel-body ">
+                            <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{coverageInfoErr}}</div>
+                        </div>
+                    </div>
+                <table class="table table-hover table-fixed Covtable-color" ng-if="!showCoverageInfoError && !memberCoverageInfoLoad">
+                    <thead>
+                        <tr>
+                            <th>Coverage Type: </th>
+                            <th>Plan: </th>
+                            <th>Plan #: </th>
+                            <th>Relationship:</th>
+                            <th>Group: </th>
+                            <th>Group #: </th>
+                            <th>Effective Date: </th>
+                            <th>End Date: </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="memDet in membershipRes track by $index" ng-show="memDet.systemCode === 'CR'" name="CVRTYPEVALUE_FT" ng-click="submitCoverageType(memDet,$index);">
+                            <td>
+                                <input type="radio" name="coverageType" ng-checked="selectedRow == $index"/> {{memDet.coverageType}}
+                            </td>
+                            <td>{{memDet.plan}}</td>
+                            <td>{{memDet.planNo}}</td>
+                            <td>{{memDet.relationship}}</td>
+                            <td>{{memDet.group}}</td>
+                            <td>{{memDet.groupNo}}</td>
+                            <td name="STARTDATE_FT">{{memDet.startDate | date: "MM-dd-yyyy"}}</td>
+                            <td name="STOPDATE_FT">{{memDet.stopDate | date: "MM-dd-yyyy"}}</td>
+                        </tr>
+                        <tr ng-repeat="memDet in membershipRes" ng-show="memDet.systemCode != 'CR'" class="hidden-table">
+                            <td> {{memDet.coverageType}}</td>
+                            <td>{{memDet.plan}}</td>
+                            <td>{{memDet.planNo}}</td>
+                            <td>{{memDet.relationship}}</td>
+                            <td>{{memDet.group}}</td>
+                            <td>{{memDet.groupNo}}</td>
+                            <td name="STARTDATE_FT">{{memDet.startDate | date: "MM-dd-yyyy"}}</td>
+                            <td name="STOPDATE_FT">{{memDet.stopDate | date: "MM-dd-yyyy"}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="padding-top-10"></div>
+<div class="row" ng-if="getMembershipErr">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div>
+            <div class="col-lg-12 col-md-12 col-sm-12 panel-body">
+                <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{memberInfoErr}}</div>
+            </div>
+        </div>
+    </div>
+</div>

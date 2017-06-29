@@ -1,0 +1,42 @@
+<!-- <div class=" panel panel-primary results-border">
+ <div class="search-results-head">
+  <div class="panel-heading">
+    <hr>
+    <h3 class="panel-title heading">RESULTS</h3>
+  </div>
+  </div> -->
+  <!-- <div> -->
+  <hr style="width:95%">
+  <div class="font-size-16 padding-left-15">RESULTS</div>
+  <div class="panel-body">
+      <div class="scroll-hr">
+    <table class="table table-hover search-table">
+        <thead class="searchTableHeader subTitle" >
+        <tr>  <!-- oB = order by , sRB = sortResultsby, sRO = sort results order -->
+          <th>#</th>
+          <th ng-click="changeSorting('memberId')">Member ID <span ng-class="getIcon('memberId')"></span></th>
+          <th ng-click="changeSorting('firstName')">First Name <span ng-class="getIcon('firstName')"></span></th>
+          <th ng-click="changeSorting('middleName')">Middle Name <span ng-class="getIcon('middleName')"></span></th>
+          <th ng-click="changeSorting('lastName')">Last Name <span ng-class="getIcon('lastName')"></span></th>
+          <th ng-click="changeSorting('dob')">DOB <span ng-class="getIcon('dob')"></span></th>
+          <th ng-click="changeSorting('gender')">Gender <span ng-class="getIcon('gender')"></span></th>
+          <th ng-click="changeSorting('address')">Address <span ng-class="getIcon('address')"></span></th>
+
+        </tr>
+        </thead>
+        <tbody class="subTitle-data">
+        <tr ng-repeat="eachRes2 in resSearch | orderBy:sort.active:sort.descending" name="MEMBERRESULT_FT">
+            <td ng-click="memberSubmit(eachRes2); closeModal();">{{ $index +1 }}.</td>
+            <td ng-click="memberSubmit(eachRes2); closeModal();" >{{ eachRes2.memberId.id }}</td>
+            <td ng-click="memberSubmit(eachRes2); closeModal();"> {{ eachRes2.firstName }}</td>
+            <td ng-click="memberSubmit(eachRes2); closeModal();">{{ eachRes2.middleName }}</td>
+            <td ng-click="memberSubmit(eachRes2); closeModal();">{{ eachRes2.lastName }}</td>
+            <td ng-click="memberSubmit(eachRes2); closeModal();">{{ eachRes2.dob | date: "MM-dd-yyyy" }}</td>
+            <td ng-click="memberSubmit(eachRes2); closeModal();">{{ eachRes2.gender }}</td>
+            <td ng-click="memberSubmit(eachRes2); closeModal();">{{ eachRes2.address }}</td>
+        </tr>
+        </tbody>
+    </table>
+      </div>
+  </div>
+ <!-- </div> -->

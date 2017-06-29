@@ -1,0 +1,58 @@
+<!-- <div class="panel panel-info" name="GROUP_RIDER_FT">
+    <div class="panel-heading panel-orange" ng-click="showGroupRiderInfo()">
+        <h3 class="panel-title entire-panel-heading">Coverage Information and Riders for ({{selBasePlan}})<i ng-if="!isRiderGroupInfo" class="fa fa-plus float-right"></i><i ng-if="isRiderGroupInfo" class="fa fa-minus float-right"></i></h3>
+    </div>
+
+    <div class="panel-body" slide-toggle="isRiderGroupInfo">
+
+      <div ng-show="grpRiderLoading" class="loading-label">
+          <span><i class="fa fa-spinner fa-spin fa-2x" aria-hidden="true"></i>Loading...</span>
+      </div>
+
+      <div class="row" ng-if="showGroupRiderError">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+          <div class="errorMessage">
+            <div class="col-lg-12 col-md-12 col-sm-12 panel-body errorMessage">
+              <div class="searchFormErrorMsgBox" name="ERRORMSG_FT">{{groupInfoErr}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        <div class="row"  ng-if="!grpRiderLoading && !showGroupRiderError">
+            <div class="col-xs-2 col-sm-2 col-lg-2">
+                <div class="row-xs-1 row-sm-1 row-lg-1 rider-font-type word-wrap"><p>Benefit Bundle Id : {{groupCoverageOverviewRes.benefitBundleOptionId}}</p></div>
+            </div>
+            <div class="col-xs-10 col-sm-10 col-lg-10" style="overflow-x:auto;" ng-if="!showGroupRiderError">
+                <table class="table table-fixed rider-left-border" >
+                    <thead >
+                    <tr>
+                        <th >Coverage Type: </th>
+                        <th >Plan Id: </th>
+                        <th >Gated: </th>
+                        <th >Carrier Name: </th>
+                        <th >Product: </th>
+                        <th >Product ID: </th>
+                        <th >Plan Type Code: </th>
+                        <th>Plan Name: </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="riders in groupCoverageOverviewRes.riderPlan">
+                        <td >{{riders.coverageType}}</td>
+                        <td >{{riders.benefitPlanId}}</td>
+                        <td >{{riders.gatedProductIndicator}}</td>
+                        <td >{{riders.legalName}}</td>
+                        <td >{{riders.productName}}</td>
+                        <td >{{riders.productId}}</td>
+                        <td >{{riders.planTypeCode}}</td>
+                        <td >{{riders.customerFacingPlanName}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div> -->

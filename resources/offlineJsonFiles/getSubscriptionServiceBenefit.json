@@ -1,0 +1,39 @@
+{
+  "planMetallicLevel": "25567894",
+  "benefitBundleOptionId": "35567894",
+  "basePlan": [
+    {
+      "INNPrimaryIndividualDeductibleMaximum": "2500",
+      "INNPrimaryFamilyDeductibleMaximum": "5000",
+      "OONPrimaryIndividualDeductibleMaximum": "6000",
+      "OONPrimaryFamilyDeductibleMaximum": "10000",
+      "INNPrimaryIndividualOOPMaximum": "4000",
+      "INNPrimaryFamilyOOPMaximum": "8000",
+      "OONPrimaryIndividualOOPMaximum": "12000",
+      "OONPrimaryFamilyOOPMaximum": "17000"
+    },
+    {
+    "INNPrimaryIndividualDeductibleMaximum": "2500",
+    "INNPrimaryFamilyDeductibleMaximum": "5000",
+    "OONPrimaryIndividualDeductibleMaximum": "6000",
+    "OONPrimaryFamilyDeductibleMaximum": "10000",
+    "INNPrimaryIndividualOOPMaximum": "4000",
+    "INNPrimaryFamilyOOPMaximum": "8000",
+    "OONPrimaryIndividualOOPMaximum": "12000",
+    "OONPrimaryFamilyOOPMaximum": "17000"
+    }
+  ],
+  "riderPlan": [
+    {
+      "benefitPlanId": "CPD124",
+      "coverageType": "M",
+      "gatedProductIndicator": "MED",
+      "legalName": "Oxford Health Insurance, Inc.",
+      "networkScheduleId": "",
+      "productName": "Gated INN/ONN",
+      "productId": "CPRD222",
+      "planTypeCode": "02",
+      "customerFacingPlanName": "planname03"
+    }
+  ]
+}

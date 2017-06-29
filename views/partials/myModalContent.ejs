@@ -1,0 +1,14 @@
+<div class="search-modal">
+	<span class="waiting-pointer" us-spinner="{radius:30, width:8, length: 16}" spinner-on="showSpinner"></span>
+    <div ng-include="'/partials/searchForm.ejs'"></div>
+    </div>
+    <div ng-show="showMemberResults">
+			<div ng-if="(searchBy === 'member' && resultsType === searchType)">
+        <div ng-include="'/partials/searchResults.ejs'"></div>
+			</div>
+    </div>
+    <div ng-show="showPlanResults">
+			<div ng-if="(searchBy === 'group')">
+        <div ng-include="'/partials/groupSearchResults.ejs'"></div>
+			</div>
+    </div>

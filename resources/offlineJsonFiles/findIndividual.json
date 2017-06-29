@@ -1,0 +1,43 @@
+{
+  "individual": [
+    {
+      "surrogateKey": "894666810",
+      "memberId": {
+          "id": "59651144200",
+          "type": "MCH",
+          "sourceSysCode": "CR"
+      },
+      "firstName": "Tammy",
+      "lastName": "Porter",
+      "dob": "1964-03-05",
+      "gender": "F",
+      "address": "5 Riverside Circle, Ellington, CT 06029, US"
+    },
+    {
+      "surrogateKey": "894666790",
+      "memberId": {
+          "id": "46615650600",
+          "type": "MCH",
+          "sourceSysCode": "CR"
+        },
+      "firstName": "Andrea",
+      "lastName": "Wilson",
+      "dob": "1966-07-08",
+      "gender": "M",
+      "address": "6773 Prairieview Crossing, North Canton, CT 06059, US"
+    },
+    {
+      "surrogateKey": "894666826",
+      "memberId": {
+          "id": "75993725100",
+          "type": "MCH",
+          "sourceSysCode": "CR"
+        },
+      "firstName": "Patrick",
+      "lastName": "Hanson",
+      "dob": "1967-02-08",
+      "gender": "M",
+      "address": "886 Johnson Crossing, Hfd, CT 06145, US"
+    }
+  ]
+}

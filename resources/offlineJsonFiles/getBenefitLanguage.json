@@ -1,0 +1,48 @@
+{
+  "benefits": [
+    {
+      "benefitName": "Accidental Dental in an outpatient setting",
+      "benefitCode": "ACCIDENTAL_DENTAL_OUTPATIENT",
+      "benefitSubsection": [
+        {
+          "general": "Coverage for inpatient psychiatric care is based upon medical necessity and limited to 30 days per calendar year.  Services for the member must be authorized by either the OXHP Behavioral Health Team or their PCP to a participating facility. Services received must be clinically appropriate for the condition.",
+          "INN": "Inpatient mental health care is covered up to Individual_Dollar_Limit at Oxford approved facilities only. Benefits are covered at Coinsurance 10% per $100. Pre-certification in advance through Oxford's Behavioral Health team is required for coverage.",
+          "OON": ""
+        }
+      ]
+    },
+    {
+      "benefitName": "Office Physical Therapy Autism",
+      "benefitCode": "PHYSICAL_THERAPY_AUTISM_OFFICE",
+      "benefitSubsection": [
+        {
+          "general": "Hospice care is covered for Individual_Visit_Limit beginning with the first days on which care is provided.  Hospice care benefit covers inpatient hospice care in a hospice, hospital provided by the hospice including drugs and medical supplies.  Hospice care requires pre-certification through Oxford's Medical Management Department.",
+          "INN": "Hospice care is covered at Coinsurance 10% at approved facilities.  Pre-certification in advance through Oxford's Medical Management Department is required for coverage.",
+          "OON": ""
+        }
+      ]
+    },
+    {
+      "benefitName": "Preventive Blood Draw",
+      "benefitCode": "PREVENTIVE_BLOOD_DRAW",
+      "benefitSubsection": [
+        {
+          "general": "Prescription drugs are covered through Our Network pharmacies.  Prescriptions can be ordered by any physician, not just Oxford participating physicians.",
+          "INN": "The member is responsible for a:Tier 1:  $5 copayment per prescription Tier 2:  $50 copayment per prescription Tier 3:  30% coinsurance up to $500 copay max per prescription Tier 4:  50% coinsurance up to $750 copay max per prescription",
+          "OON": ""
+        }
+      ]
+    },
+    {
+      "benefitName": "Preventive Blood Draw",
+      "benefitCode": "PREVENTIVE_BLOOD_DRAW",
+      "benefitSubsection": [
+        {
+          "general": " Outpatient physical, speech,  occupational and cognitive therapy rendered by an Oxford participating provider is covered subject to the inplan deductible and a $10 Copay member copayment.",
+          "INN": "For Non-Gated Plans - a referral is not necessary.  For gated products, a referral is required.",
+          "OON": ""
+        }
+      ]
+    }
+  ]
+}

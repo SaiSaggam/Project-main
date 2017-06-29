@@ -1,0 +1,173 @@
+.mainPageScrollHide {
+  overflow: hidden;
+}
+
+.beachImage {
+background-image: url(../../lib/images/beach-2.jpg);
+background-size:cover;
+background-position: center bottom;
+background-repeat: no-repeat;
+margin-top: -18px;
+}
+.beachImage-inside {
+padding-top: 10%;
+}
+.foreground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius:10px;
+  /*background-color: rgba(173,216,230, 0.6) !important;*/
+  background-color:rgba(88,88,88, 0.6) !important;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 5%;
+    /*margin-bottom: 50px;*/
+}
+.foreground p{
+  font-weight: bolder;
+}
+
+.font-color-white {
+  color: white !important;
+}
+
+.main-page-header {
+    background-color: #005295 !important;
+    border-color: #005295 !important;
+    border-radius: 0px !important;
+}
+
+.main-page-header-name {
+    color: #fff !important;
+}
+
+.main-page-header-icon {
+    color: #fff !important;
+}
+
+.margin-left-15per {
+    margin-left: 15% !important;
+}
+
+.margin-right-15per {
+    margin-right: 15% !important;
+}
+
+.main-page-login-user {
+    text-align: center;
+    /*padding-top: 2%;*/
+}
+
+.main-page-desc {
+
+    padding: 0 18%;
+}
+
+.main-page-desc-first-item {
+    padding-top: 2%;
+
+
+}
+
+.main-page-apps {
+    background-color: #E8F6FA;
+    margin-top: 2%;
+}
+
+.main-page-app-section {
+    padding: 2%;
+}
+
+.main-page-app-section-details {
+    background-color: #E8F6FA;
+    padding-left: 25%;
+}
+
+.main-page-apps-sections {
+    padding: 2% 10%;
+}
+
+.main-page-apps-section {
+    display: inline-block;
+    max-width: 32%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.apps-section-header {
+    padding-left: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #005ECA;
+}
+
+.apps-section-content {
+    margin-left: 33px;
+    margin-top: 5px;
+    color: #999DAC;
+}
+
+.section-content-label a {
+    text-decoration: underline;
+}
+
+.uhc {
+  margin-top: 5px;
+}
+
+.movement{
+    position: relative;
+    -webkit-animation: mymove 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 1s ;
+}
+
+.main-pageapps-sections {
+height :180px;
+width: 100%;
+background-color: #E8F6FA;
+}
+
+.font-12 {
+  font-size: 12px;
+
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {top: 15px;}
+    to {top: 0px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {top:15px;}
+    to {top: 0px;}
+}
+
+.padding-top-1 {
+  padding-top: 1em;
+}
+.padding-right-1 {
+  padding-right: 1em;
+}
+.padding-left-4 {
+  padding-left: 4em;
+}
+.font-color {
+  color:#00488F;
+}
+
+.font-size-1em {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.banner-backcolor {
+  background-color: #E8F6FA;
+}
+
+.spacing-3 {
+  height: 3em;
+}

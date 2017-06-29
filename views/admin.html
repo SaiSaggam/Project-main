@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%  include ../public/app/partials/header.ejs %>
+    <title>Polaris Benefit Search</title>
+</head>
+
+<body ng-app="masterApp">
+<div  ng-controller="quickLinksCtrl">
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: white !important">
+        <div class="container-fluid" >
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbarAdmin">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Benefit Search - ADMIN </a>
+                <div class="navbar-text" > <%=firstName%> <%=lastName%> : logged at : {{currentLogin}}</div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="myNavbarAdmin">
+                <ul class="nav navbar-nav " >
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+        <div ng-controller="quickLinksCtrl" style=" padding-top:50px" name="ADMINPAGE_FT">
+            <div>
+                <h2></h2>
+                <div class="panel ">
+                    <a href="" ng-click="closeAdminPage();" style="margin-top:250px"><span class="glyphicon glyphicon-circle-arrow-left"></span> Benefit Search</a>
+                </div>
+            </div>
+
+            <%  include ../public/app/partials/quickLinks.ejs %>
+        </div>
+
+</div>
+</body>
+
+</html>

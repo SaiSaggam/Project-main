@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "groupName": "SoftBank",
+      "groupNo": "1118476",
+      "tel": "645-686-2111",
+      "address": "356 Main St s, HARTFORD, CT 06103",
+      "sizeDef": "Small Group",
+      "effectiveStartDate": "2017-01-01"
+    },
+    {
+      "groupName": "Apple",
+      "groupNo": "1118477",
+      "tel": "212-686-2703",
+      "address": "356 Main St s, HARTFORD, CT 06103",
+      "sizeDef": "Small Group",
+      "effectiveStartDate": "2017-01-01"
+    },
+    {
+      "groupName": "Barclays",
+      "groupNo": "1118478",
+      "tel": "860-686-2703",
+      "address": "356 Main St s, HARTFORD, CT 06103",
+      "sizeDef": "Small Group",
+      "effectiveStartDate": "2017-01-01"
+    },
+    {
+      "groupName": "Benz Cie.",
+      "groupNo": "1118479",
+      "tel": "645-686-2703",
+      "address": "356 Main St s, HARTFORD, CT 06103",
+      "sizeDef": "Small Group",
+      "effectiveStartDate": "2017-01-01"
+    }
+  ]
+}

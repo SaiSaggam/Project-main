@@ -1,0 +1,7 @@
+.idea
+/node_modules
+karma.cmd
+mocha.cmd
+tests/unit-tests/coverage_reports
+tests/unit-tests/jasmine_reports
+log/*

@@ -1,0 +1,30 @@
+{
+  "INN": {
+    "individualDeductibleMax": 2500,
+    "individualDeductibleYTD": 555,
+    "individualDeductibleRem": 1945,
+    "familyDeductibleMax": 5000,
+    "familyDeductibleYTD": 500,
+    "familyDeductibleRem": 4500,
+    "individualOOPMax": 2500,
+    "individualOOPYTD": 555,
+    "individualOOPRem": 1945,
+    "familyOOPMax": 5000,
+    "familyOOPYTD": 545,
+    "familyOOPRem": 4455
+  },
+  "OON": {
+    "individualDeductibleMax": 2500,
+    "individualDeductibleYTD": 565,
+    "individualDeductibleRem": 1935,
+    "familyDeductibleMax": 5000,
+    "familyDeductibleYTD": 500,
+    "familyDeductibleRem": 4500,
+    "individualOOPMax": 2500,
+    "individualOOPYTD": 585,
+    "individualOOPRem": 1915,
+    "familyOOPMax": 5000,
+    "familyOOPYTD": 500,
+    "familyOOPRem": 4500
+  }
+}
