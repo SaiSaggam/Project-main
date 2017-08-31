@@ -49,5 +49,5 @@
     "start": "node server.js",
     "test": "mocha --timeout 20000 tests/service-tests/mochaTestRunner.js"
   },
-  "author": "Besard Gjoni"
+  "author": "Sai Saggam"
 }
